@@ -1,0 +1,24 @@
+2023-10-16 11:02:25,365 [START] INFO => Process started by diana.s. Args: ['D:\\RPA\\template\\p000_main.py', 'false']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2023-10-16 11:02:25,428 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.061316s       | * time elapsed: 1.103928s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2023-10-16 11:03:30,955 [P001_PROJECT_SETUP] [T02_CREATE_JIRA_INSTANCE]  INFO => None
+
+* params: []      
+* function duration: 65.523267s      | * time elapsed: 66.628469s     
+* success: true   
+* output: Instância do jira criada no servidor https://jira.sidi.org.br. Cookies: [{'domain': 'jira.sidi.org.br', 'httpOnly': True, 'name': 'JSESSIONID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': '077BA810B27F63949059D70D45BAC701'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAccessCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|JhcEVR7boQ3lGujwqMB1RU3z1q5S8wgQkhgRvdyss4AfOHyOnWBiA6/laMR6KOnLznUgN532isFmXYbOvWTeCnHZl2VJA9Sej+mhNUcPFosaCMW0tsrEEIhowtL9X+5rmMm6UY0sxTsSLc3ShQ18aOUil9rAp02nJCMApPB61LODuxTofpurUlt5lVVxcwYCp3orqUZxXv4cXhWIngMs1w4xNZvujtTyGDh6xD4mJcn6s3JlXDpUdkDTobMZe3ITf4Zbgmx/AuEvagSurd5hy4Kutp5Ioa/wvy/BSSkDxIvPBr/nZIMco10/dcQaLLI0OS03nSAmUOTkTYRxrTjSB3ESZE1Kp0QZQsSkV0VsX313HzgSqHQ0kfwlsmRoZsrJaMRpfp+l/KZdw8HUAX2AFV1qmyCWJdvebqjLph9Uwzzb81XJ9Ud8stu/4kZ4Z2f5IxA4QX4C9oZ89DcskPgdHQ=='}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAnalyticCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_https_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|eqll2Yfx0oKrMj2+0Octw3XH287jwqfB0SshurnPGSgZq66E7PGUlNtudnJe+JtLFmE+Px6qFZ/7RD2TMj1mNcIOihRVin571Aqg8ndcmco4DAY60FQ2+6qOXxIXIK0LW6tqn89XjMdHeSNlK7qilw=='}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'atlassian.xsrf.token', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'BOFA-3JJM-HPI5-RE06_2b3b54705b0bf48bef75a9980a536ca666c5f6a3_lout'}, {'domain': 'jira.sidi.org.br', 'expiry': 1697465572, 'httpOnly': False, 'name': 'AzureAppProxyPreauthSessionCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_9ae87c82-9890-4be2-ac50-838adae9599c_1.4', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|a/EGJYmwU+SVByBta/WHad3L0HXA4H1VAojAfh64J9hQS6yybQhO3lekf98TeeWPhl5q7g/CJGlYd6xKOCBM5Kk14mcx5q9Km6GVgfN0kIIHxHJtY15rnbyAjxZsONkJkoRlGGQDGHEvnt9M6Mugntbk1leeQhDHnVNQTUIkWmrf3613+UgqjAY6D81/HJmyBI8vuFZ2ggLNMzdUdKy/mETBNSnckNuWcKtxFbGeOquunvSqNUzGAZ11mjsdOv9IOcru5UkxIF/kOtu6EIV63g=='}].
+
+

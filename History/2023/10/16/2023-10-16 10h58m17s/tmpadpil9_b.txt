@@ -1,0 +1,302 @@
+Exception
+Python 3.11.4: d:\RPA\template\venv-template\Scripts\python.exe
+Mon Oct 16 10:59:35 2023
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ C:\Python311\Lib\runpy.py in _run_module_as_main(mod_name='__main__', alter_argv=False)
+  196     if alter_argv:
+  197         sys.argv[0] = mod_spec.origin
+  198     return _run_code(code, main_globals, None,
+  199                      "__main__", mod_spec)
+  200 
+global _run_code = <function _run_code>
+code = <code object <module> at 0x000001E2E840EC30, fil...ugpy\launcher/../..\debugpy\__main__.py", line 1>
+main_globals = {'__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__cached__': r'c:\Users\diana.s\.vscode\extensions\ms-python.py..../..\debugpy\__pycache__\__main__.cpython-311.pyc', '__doc__': None, '__file__': r'c:\Users\diana.s\.vscode\extensions\ms-python.py.../../..\debugpy\launcher/../..\debugpy\__main__.py', '__loader__': <_frozen_importlib_external.SourceFileLoader object>, '__name__': '__main__', '__package__': '', '__spec__': ModuleSpec(name='__main__', loader=<_frozen_impo...\\debugpy\\launcher/../..\\debugpy\\__main__.py'), 'cli': <module 'debugpy.server.cli' from 'c:\\Users\\di...cher/../..\\debugpy/..\\debugpy\\server\\cli.py'>, ...}
+mod_spec = ModuleSpec(name='__main__', loader=<_frozen_impo...\\debugpy\\launcher/../..\\debugpy\\__main__.py')
+
+ C:\Python311\Lib\runpy.py in _run_code(code=<code object <module> at 0x000001E2E840EC30, fil...ugpy\launcher/../..\debugpy\__main__.py", line 1>, run_globals={'__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__cached__': r'c:\Users\diana.s\.vscode\extensions\ms-python.py..../..\debugpy\__pycache__\__main__.cpython-311.pyc', '__doc__': None, '__file__': r'c:\Users\diana.s\.vscode\extensions\ms-python.py.../../..\debugpy\launcher/../..\debugpy\__main__.py', '__loader__': <_frozen_importlib_external.SourceFileLoader object>, '__name__': '__main__', '__package__': '', '__spec__': ModuleSpec(name='__main__', loader=<_frozen_impo...\\debugpy\\launcher/../..\\debugpy\\__main__.py'), 'cli': <module 'debugpy.server.cli' from 'c:\\Users\\di...cher/../..\\debugpy/..\\debugpy\\server\\cli.py'>, ...}, init_globals=None, mod_name='__main__', mod_spec=ModuleSpec(name='__main__', loader=<_frozen_impo...\\debugpy\\launcher/../..\\debugpy\\__main__.py'), pkg_name='', script_name=None)
+   86                        __package__ = pkg_name,
+   87                        __spec__ = mod_spec)
+   88     exec(code, run_globals)
+   89     return run_globals
+   90 
+builtinexec = <built-in function exec>
+code = <code object <module> at 0x000001E2E840EC30, fil...ugpy\launcher/../..\debugpy\__main__.py", line 1>
+run_globals = {'__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__cached__': r'c:\Users\diana.s\.vscode\extensions\ms-python.py..../..\debugpy\__pycache__\__main__.cpython-311.pyc', '__doc__': None, '__file__': r'c:\Users\diana.s\.vscode\extensions\ms-python.py.../../..\debugpy\launcher/../..\debugpy\__main__.py', '__loader__': <_frozen_importlib_external.SourceFileLoader object>, '__name__': '__main__', '__package__': '', '__spec__': ModuleSpec(name='__main__', loader=<_frozen_impo...\\debugpy\\launcher/../..\\debugpy\\__main__.py'), 'cli': <module 'debugpy.server.cli' from 'c:\\Users\\di...cher/../..\\debugpy/..\\debugpy\\server\\cli.py'>, ...}
+
+ c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\__main__.py in <module>
+   35         del sys.path[0]
+   36 
+   37     from debugpy.server import cli
+   38 
+   39     cli.main()
+cli = <module 'debugpy.server.cli' from 'c:\\Users\\di...cher/../..\\debugpy/..\\debugpy\\server\\cli.py'>
+cli.main = <function main>
+
+ c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\server\cli.py in main()
+  428             "pid": attach_to_pid,
+  429         }[options.target_kind]
+  430         run()
+  431     except SystemExit as exc:
+  432         log.reraise_exception(
+run = <function run_file>
+
+ c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\server\cli.py in run_file()
+  282 
+  283     log.info("Running file {0!r}", target)
+  284     runpy.run_path(target, run_name="__main__")
+  285 
+  286 
+global runpy = <module '_pydevd_bundle.pydevd_runpy' from 'c:\\...ndored\\pydevd\\_pydevd_bundle\\pydevd_runpy.py'>
+runpy.run_path = <function run_path>
+target = r'D:\RPA\template\p000_main.py'
+run_name undefined
+
+ c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py in run_path(path_name=r'D:\RPA\template\p000_main.py', init_globals=None, run_name='__main__')
+  319         # execfile() doesn't help as we want to allow compiled files
+  320         code, fname = _get_code_from_file(run_name, path_name)
+  321         return _run_module_code(code, init_globals, run_name,
+  322                                 pkg_name=pkg_name, script_name=fname)
+  323     else:
+global _run_module_code = <function _run_module_code>
+code = <code object <module> at 0x000001E2EAD4EF90, file "D:\RPA\template\p000_main.py", line 1>
+init_globals = None
+run_name = '__main__'
+pkg_name = ''
+script_name undefined
+fname = r'D:\RPA\template\p000_main.py'
+
+ c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py in _run_module_code(code=<code object <module> at 0x000001E2EAD4EF90, file "D:\RPA\template\p000_main.py", line 1>, init_globals=None, mod_name='__main__', mod_spec=None, pkg_name='', script_name=r'D:\RPA\template\p000_main.py')
+  133     with _TempModule(mod_name) as temp_module, _ModifiedArgv0(fname):
+  134         mod_globals = temp_module.module.__dict__
+  135         _run_code(code, mod_globals, init_globals,
+  136                   mod_name, mod_spec, pkg_name, script_name)
+  137     # Copy the globals of the temporary module, as they
+global _run_code = <function _run_code>
+code = <code object <module> at 0x000001E2EAD4EF90, file "D:\RPA\template\p000_main.py", line 1>
+mod_globals = {'P001_Project_Setup': <class 'p001_project_setup.P001_Project_Setup'>, 'P002_Get_Jira_Issues': <class 'p002_get_jira_requests_information.P002_Get_Jira_Issues'>, 'P003_Write_Issues_To_File': <class 'p003_write_issues_to_file.P003_Write_Issues_To_File'>, 'RPALogging': <class 'Assets.Libraries.RPA.logger.RPALogging'>, 'Settings': <class 'Assets.Libraries.cfg.Settings'>, 'Terminate': <function Terminate>, 'TerminateAll': <function TerminateAll>, '__builtins__': {'ArithmeticError': <class 'ArithmeticError'>, 'AssertionError': <class 'AssertionError'>, 'AttributeError': <class 'AttributeError'>, 'BaseException': <class 'BaseException'>, 'BaseExceptionGroup': <class 'BaseExceptionGroup'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'BufferError': <class 'BufferError'>, 'BytesWarning': <class 'BytesWarning'>, 'ChildProcessError': <class 'ChildProcessError'>, ...}, '__cached__': None, '__doc__': None, ...}
+init_globals = None
+mod_name = '__main__'
+mod_spec = None
+pkg_name = ''
+script_name = r'D:\RPA\template\p000_main.py'
+
+ c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py in _run_code(code=<code object <module> at 0x000001E2EAD4EF90, file "D:\RPA\template\p000_main.py", line 1>, run_globals={'P001_Project_Setup': <class 'p001_project_setup.P001_Project_Setup'>, 'P002_Get_Jira_Issues': <class 'p002_get_jira_requests_information.P002_Get_Jira_Issues'>, 'P003_Write_Issues_To_File': <class 'p003_write_issues_to_file.P003_Write_Issues_To_File'>, 'RPALogging': <class 'Assets.Libraries.RPA.logger.RPALogging'>, 'Settings': <class 'Assets.Libraries.cfg.Settings'>, 'Terminate': <function Terminate>, 'TerminateAll': <function TerminateAll>, '__builtins__': {'ArithmeticError': <class 'ArithmeticError'>, 'AssertionError': <class 'AssertionError'>, 'AttributeError': <class 'AttributeError'>, 'BaseException': <class 'BaseException'>, 'BaseExceptionGroup': <class 'BaseExceptionGroup'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'BufferError': <class 'BufferError'>, 'BytesWarning': <class 'BytesWarning'>, 'ChildProcessError': <class 'ChildProcessError'>, ...}, '__cached__': None, '__doc__': None, ...}, init_globals=None, mod_name='__main__', mod_spec=None, pkg_name='', script_name=r'D:\RPA\template\p000_main.py')
+  122                        __package__=pkg_name,
+  123                        __spec__=mod_spec)
+  124     exec(code, run_globals)
+  125     return run_globals
+  126 
+builtinexec = <built-in function exec>
+code = <code object <module> at 0x000001E2EAD4EF90, file "D:\RPA\template\p000_main.py", line 1>
+run_globals = {'P001_Project_Setup': <class 'p001_project_setup.P001_Project_Setup'>, 'P002_Get_Jira_Issues': <class 'p002_get_jira_requests_information.P002_Get_Jira_Issues'>, 'P003_Write_Issues_To_File': <class 'p003_write_issues_to_file.P003_Write_Issues_To_File'>, 'RPALogging': <class 'Assets.Libraries.RPA.logger.RPALogging'>, 'Settings': <class 'Assets.Libraries.cfg.Settings'>, 'Terminate': <function Terminate>, 'TerminateAll': <function TerminateAll>, '__builtins__': {'ArithmeticError': <class 'ArithmeticError'>, 'AssertionError': <class 'AssertionError'>, 'AttributeError': <class 'AttributeError'>, 'BaseException': <class 'BaseException'>, 'BaseExceptionGroup': <class 'BaseExceptionGroup'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'BufferError': <class 'BufferError'>, 'BytesWarning': <class 'BytesWarning'>, 'ChildProcessError': <class 'ChildProcessError'>, ...}, '__cached__': None, '__doc__': None, ...}
+
+ D:\RPA\template\p000_main.py in <module>
+   18     Terminate()
+   19 
+   20 except Exception as e:
+   21 
+   22     TerminateAll(e)
+TerminateAll = <function TerminateAll>
+e undefined
+
+ D:\RPA\template\Assets\Libraries\RPA\control.py in TerminateAll(e=Exception('Houve um erro na chamada da função CREATEJIRAINSTANCE.'))
+   27     error_html = cgitb.html(sys.exc_info(), context=5)
+   28     trace =  "".join(traceback.format_exception(type(e), e, e.__traceback__))
+   29     E00_General_Error(error_html, trace)
+   30     RPALogging.TerminateLogger(1)
+   31     sys.exit(1)  # Stop execution with error result
+global E00_General_Error = <class 'Events.e000_general.E00_General_Error'>
+error_html = '\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n'
+trace = 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n'
+
+ D:\RPA\template\Events\e000_general.py in __new__(self=<class 'Events.e000_general.E00_General_Error'>, error_html='\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', traceback='Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n')
+   14         """Erro genérico"""
+   15 
+   16         self.E01_Send_Error_Report(error_html, traceback)
+   17 
+   18 
+self = <class 'Events.e000_general.E00_General_Error'>
+self.E01_Send_Error_Report = <function RPALogging.Task.<locals>.inner>
+error_html = '\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n'
+traceback = 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n'
+
+ D:\RPA\template\Assets\Libraries\RPA\logger.py in inner(*args=('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n'), **kwargs={})
+  137 
+  138                 #propaga a exceçao
+  139                 raise error
+  140             else:
+  141                 #loga a execuçao
+error = Exception('Houve um erro na chamada da função SENDEMAIL.')
+
+ D:\RPA\template\Assets\Libraries\RPA\logger.py in inner(*args=('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n'), **kwargs={})
+   86 
+   87             try:
+   88                 f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+   89                 result = f_result
+   90 
+f_result undefined
+f = <function E00_General_Error.E01_Send_Error_Report>
+args = ('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n')
+kwargs = {}
+
+ D:\RPA\template\Events\e000_general.py in E01_Send_Error_Report(error_html='\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', traceback='Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n')
+   30         log_zip_path = ZipFolder(Global.log_directory)
+   31 
+   32         SendEmail(
+   33             Settings.error_email['receivers'],
+   34             Settings.error_email['ccs'],
+global SendEmail = <function SendEmail>
+global Settings = <class 'Assets.Libraries.cfg.Settings'>
+Settings.error_email = {'bccs': ['rpa.bot@sidi.org.br'], 'ccs': ['s.aguena@sidi.org.br'], 'receivers': ['diana.s@sidi.org.br'], 'subject': '[RPA Error] Template V7.0'}
+body = '\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n'
+log_zip_path = r'History\2023\10\16\log.zip'
+credential undefined
+global Credentials = <class 'Assets.Libraries.credentials.Credentials'>
+Credentials.microsoft = <Assets.Libraries.RPA.Cryptography.security.Credential object>
+
+ D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py in inner(*args=(['diana.s@sidi.org.br'], ['s.aguena@sidi.org.br'], ['rpa.bot@sidi.org.br'], '[RPA Error] Template V7.0', '\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', [r'History\2023\10\16\log.zip']), **kwargs={'credential': <Assets.Libraries.RPA.Cryptography.security.Credential object>, 'decrypted_credential': <Assets.Libraries.RPA.Cryptography.security.Credential object>})
+   91             # Caso a exceção capturada aqui seja de qualquer outro tipo, retorna apenas "False". A exceção não é propagada pois pode conter dados sensíveis das credenciais.
+   92             except Exception as e:
+   93                 raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+   94         return inner
+   95     return dec
+builtinException = <class 'Exception'>
+Exception: Houve um erro na chamada da função SENDEMAIL.
+    __cause__ = None
+    __class__ = <class 'Exception'>
+    __context__ = Exception('Houve um erro na chamada da função CREATEJIRAINSTANCE.')
+    __delattr__ = <method-wrapper '__delattr__' of Exception object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of Exception object>
+    __doc__ = 'Common base class for all non-exit exceptions.'
+    __eq__ = <method-wrapper '__eq__' of Exception object>
+    __format__ = <built-in method __format__ of Exception object>
+    __ge__ = <method-wrapper '__ge__' of Exception object>
+    __getattribute__ = <method-wrapper '__getattribute__' of Exception object>
+    __getstate__ = <built-in method __getstate__ of Exception object>
+    __gt__ = <method-wrapper '__gt__' of Exception object>
+    __hash__ = <method-wrapper '__hash__' of Exception object>
+    __init__ = <method-wrapper '__init__' of Exception object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of Exception object>
+    __lt__ = <method-wrapper '__lt__' of Exception object>
+    __ne__ = <method-wrapper '__ne__' of Exception object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of Exception object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of Exception object>
+    __repr__ = <method-wrapper '__repr__' of Exception object>
+    __setattr__ = <method-wrapper '__setattr__' of Exception object>
+    __setstate__ = <built-in method __setstate__ of Exception object>
+    __sizeof__ = <built-in method __sizeof__ of Exception object>
+    __str__ = <method-wrapper '__str__' of Exception object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    add_note = <built-in method add_note of Exception object>
+    args = ('Houve um erro na chamada da função SENDEMAIL.',)
+    with_traceback = <built-in method with_traceback of Exception object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 65, in inner
+    result = f(*args, **kwargs)  # Chama a função, passando seus argumentos originais (que já contém a credencial criptografada)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\Auth\session.py", line 37, in CreateJiraInstance
+    return JIRA(
+           ^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 580, in __init__
+    si = self.server_info()
+         ^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3120, in server_info
+    j = self._get_json("serverInfo")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3858, in _get_json
+    raise e
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3855, in _get_json
+    r_json = json_loads(r)
+             ^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\utils\__init__.py", line 76, in json_loads
+    return resp.json()
+           ^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\p000_main.py", line 12, in <module>
+    P001_Project_Setup()
+  File "D:\RPA\template\p001_project_setup.py", line 21, in __new__
+    self.T02_Create_Jira_Instance()
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 139, in inner
+    raise error
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 88, in inner
+    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p001_project_setup.py", line 42, in T02_Create_Jira_Instance
+    Global.jira : JIRA = CreateJiraInstance(jira_cookies, credential = Credentials.jira)  # Cria uma nova instância do Jira
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 93, in inner
+    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+Exception: Houve um erro na chamada da função CREATEJIRAINSTANCE.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\diana.s\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "D:\RPA\template\p000_main.py", line 22, in <module>
+    TerminateAll(e)
+  File "D:\RPA\template\Assets\Libraries\RPA\control.py", line 29, in TerminateAll
+    E00_General_Error(error_html, trace)
+  File "D:\RPA\template\Events\e000_general.py", line 16, in __new__
+    self.E01_Send_Error_Report(error_html, traceback)
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 139, in inner
+    raise error
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 88, in inner
+    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Events\e000_general.py", line 32, in E01_Send_Error_Report
+    SendEmail(
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 93, in inner
+    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+Exception: Houve um erro na chamada da função SENDEMAIL.
+

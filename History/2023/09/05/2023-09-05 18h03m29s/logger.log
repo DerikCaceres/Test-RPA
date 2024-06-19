@@ -1,0 +1,214 @@
+2023-09-05 18:03:30,703 [START] INFO => Process started by diana.s. Args: ['D:\\RPA\\template\\p000_main.py', 'true', 'private_key.pem']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2023-09-05 18:03:30,735 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Project Setup
+
+* params: []      
+* function duration: 0.032045s       | * time elapsed: 1.730909s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2023-09-05 18:04:33,536 [P001_PROJECT_SETUP] [T02_CREATE_JIRA_INSTANCE]  INFO => None
+
+* params: []      
+* function duration: 62.799769s      | * time elapsed: 64.531468s     
+* success: true   
+* output: Instância do jira criada no servidor https://jira.sidi.org.br. Cookies: [{'domain': 'jira.sidi.org.br', 'httpOnly': True, 'name': 'JSESSIONID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'F01DF83E138F2B8639B540BB931AD9B8'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAccessCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|LV6WFs3PZhxbMx3TjfImD2ezD5SHl81x9yk5jhhqabB5+jZVmAAgSeCWJjwmyJZH8x3GQab8M7nEF/GVIMnSOsxRWYIQI6Zrj1fHmHAAMQ7a4NiWrg2x4C6RhWGrBjxvOhYjwQlSvXQZo+kla+kkUyBq1mbUwqA3zIr+5FAVSXwiiRShB1O2p/eerApQnZ6j2RZxwxrROvjyeE0WJCeNZJXkYXv4EULUkPa1FzP5fXa5Yb/cqj1xcZcz2Z4M2G5USYXVXESQnVpjxkdbEHJlhtx7YiCupyHo4Z/B+1MoO0sS4+E3dO1q60UlJmNP90TFV2YBiPYZyIEmHI1z9XD167ZqSzepR8JIoKxPZvtMtbh9fAUASDrudrnUGrt1/HxfvFFt9GsCia5+LpF6thgiEp45Ty3jqt8GKmXzaynEU7MNOQsujT9DofWc+VnEAWTVzeUrGJNeKVXrTTElX62jQ14+tt/M9mmVGk7Fmst497k='}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAnalyticCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_https_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|+deknO1maxPbJGR04LyoM/MW4bIavR89kJ22RVJ2MByXaedXjLafVN1PnGuJWoHcm7F7v6vn9pEX9GA27sk0tpZlUewQu07nYkjecXqiNWPcuzwl0ihifDgO6dZuN2Qhri9Mo/v/y/kfGZ8qxv2drA=='}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'atlassian.xsrf.token', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'BOFA-3JJM-HPI5-RE06_3511cf24f9f5fd8a676ca6656f91c3be154ecea5_lout'}, {'domain': 'jira.sidi.org.br', 'expiry': 1693948425, 'httpOnly': False, 'name': 'AzureAppProxyPreauthSessionCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_25b2fd49-419e-436c-bc08-0b59c1bd62c9_1.4', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|S+sCbloSslw7cQRiqWezs8r08IrVtJzYN2+C3PMWhM8pBhu3y+wv/zK9HTuBvoT5QpbhIzTgBHjKdmYzAi9tJBlQ0wnc6nTZ4uJqVN0UXy9DATwODAtKlO0BxuUXfa+V5yMC05jyk+5eClBDjMSrUBn8GZF25jHgah/vq/Wc9oNZsWiRY3WAhgImHjtOhCVInMQxs6HrDe8V9dKRnZw23qodzg2CytdmuG6E/+qcu3xHUzDWLIYNvqwRoAyGUK2YSYl3Ovn2It6I2hOZkFgliA=='}].
+
+
+2023-09-05 18:04:40,173 [P002_GET_JIRA_ISSUES] [T02_GET_JIRA_ISSUES]  INFO =>  Get Jira Reimbursement issues 
+
+* params: []      
+* function duration: 6.633802s       | * time elapsed: 71.167798s     
+* success: true   
+* output: 323 issues encontradas.
+
+
+2023-09-05 18:04:40,852 [P003_WRITE_ISSUES_TO_FILE] [T01_WRITE_ISSUES_TO_FILE]  ERROR => Cria um novo arquivo json com as issues obtidas do jira
+
+* params: ["[<JIRA Issue: key='RPA-2892', id='366003'>, <JIRA Issue: key='RPA-2865', id='365158'>, <JIRA Issue: key='RPA-2855', id='364948'>, <JIRA Issue: key='RPA-2806', id='362661'>, <JIRA Issue: key='RPA-2851', id='364362'>, <JIRA Issue: key='RPA-2850', id='364358'>, <JIRA Issue: key='RPA-2726', id='358985'>, <JIRA Issue: key='RPA-2647', id='357242'>, <JIRA Issue: key='RPA-2636', id='356676'>, <JIRA Issue: key='RPA-2590', id='355709'>, <JIRA Issue: key='RPA-2721', id='358895'>, <JIRA Issue: key='RPA-2697', id='357913'>, <JIRA Issue: key='RPA-2821', id='363385'>, <JIRA Issue: key='RPA-2791', id='361579'>, <JIRA Issue: key='RPA-2785', id='361026'>, <JIRA Issue: key='RPA-2798', id='361693'>, <JIRA Issue: key='RPA-2775', id='360673'>, <JIRA Issue: key='RPA-2730', id='359744'>, <JIRA Issue: key='RPA-2774', id='360670'>, <JIRA Issue: key='RPA-2773', id='360631'>, <JIRA Issue: key='RPA-2852', id='364508'>, <JIRA Issue: key='RPA-2783', id='360866'>, <JIRA Issue: key='RPA-2790', id='361577'>, <JIRA Issue: key='RPA-2784', id='361025'>, <JIRA Issue: key='RPA-2686', id='357671'>, <JIRA Issue: key='RPA-2696', id='357909'>, <JIRA Issue: key='RPA-2582', id='354992'>, <JIRA Issue: key='RPA-2655', id='357491'>, <JIRA Issue: key='RPA-2723', id='358940'>, <JIRA Issue: key='RPA-2724', id='358943'>, <JIRA Issue: key='RPA-2742', id='360023'>, <JIRA Issue: key='RPA-2701', id='358750'>, <JIRA Issue: key='RPA-2700', id='358746'>, <JIRA Issue: key='RPA-2725', id='358984'>, <JIRA Issue: key='RPA-2699', id='357927'>, <JIRA Issue: key='RPA-2698', id='357926'>, <JIRA Issue: key='RPA-2586', id='355386'>, <JIRA Issue: key='RPA-2615', id='356309'>, <JIRA Issue: key='RPA-2395', id='350616'>, <JIRA Issue: key='RPA-2587', id='355487'>, <JIRA Issue: key='RPA-2452', id='351757'>, <JIRA Issue: key='RPA-2453', id='351829'>, <JIRA Issue: key='RPA-2568', id='354954'>, <JIRA Issue: key='RPA-2585', id='355254'>, <JIRA Issue: key='RPA-2612', id='356281'>, <JIRA Issue: key='RPA-2591', id='355778'>, <JIRA Issue: key='RPA-2605', id='355879'>, <JIRA Issue: key='RPA-2588', id='355489'>, <JIRA Issue: key='RPA-2641', id='356887'>, <JIRA Issue: key='RPA-2633', id='356413'>, <JIRA Issue: key='RPA-2460', id='352038'>, <JIRA Issue: key='RPA-2303', id='348993'>, <JIRA Issue: key='RPA-2527', id='353452'>, <JIRA Issue: key='RPA-2526', id='353354'>, <JIRA Issue: key='RPA-2444', id='351085'>, <JIRA Issue: key='RPA-2461', id='352068'>, <JIRA Issue: key='RPA-2200', id='346168'>, <JIRA Issue: key='RPA-2539', id='353996'>, <JIRA Issue: key='RPA-2525', id='353283'>, <JIRA Issue: key='RPA-2471', id='352722'>, <JIRA Issue: key='RPA-2280', id='348539'>, <JIRA Issue: key='RPA-2346', id='349770'>, <JIRA Issue: key='RPA-2311', id='349356'>, <JIRA Issue: key='RPA-2310', id='349227'>, <JIRA Issue: key='RPA-2379', id='350180'>, <JIRA Issue: key='RPA-2286', id='348739'>, <JIRA Issue: key='RPA-2285', id='348720'>, <JIRA Issue: key='RPA-2540', id='354071'>, <JIRA Issue: key='RPA-2260', id='347176'>, <JIRA Issue: key='RPA-2243', id='346357'>, <JIRA Issue: key='RPA-2114', id='345338'>, <JIRA Issue: key='RPA-2090', id='344770'>, <JIRA Issue: key='RPA-2089', id='344768'>, <JIRA Issue: key='RPA-2082', id='344557'>, <JIRA Issue: key='RPA-2256', id='346985'>, <JIRA Issue: key='RPA-2257', id='346986'>, <JIRA Issue: key='RPA-2084', id='344639'>, <JIRA Issue: key='RPA-1903', id='341325'>, <JIRA Issue: key='RPA-2158', id='345424'>, <JIRA Issue: key='RPA-2092', id='345055'>, <JIRA Issue: key='RPA-2259', id='347037'>, <JIRA Issue: key='RPA-2382', id='350378'>, <JIRA Issue: key='RPA-2371', id='350073'>, <JIRA Issue: key='RPA-2396', id='350619'>, <JIRA Issue: key='RPA-2381', id='350324'>, <JIRA Issue: key='RPA-2380', id='350282'>, <JIRA Issue: key='RPA-2372', id='350094'>, <JIRA Issue: key='RPA-2281', id='348567'>, <JIRA Issue: key='RPA-2258', id='347034'>, <JIRA Issue: key='RPA-1991', id='342370'>, <JIRA Issue: key='RPA-2083', id='344638'>, <JIRA Issue: key='RPA-2112', id='345285'>, <JIRA Issue: key='RPA-2113', id='345286'>, <JIRA Issue: key='RPA-2088', id='344765'>, <JIRA Issue: key='RPA-1750', id='335988'>, <JIRA Issue: key='RPA-1440', id='328745'>, <JIRA Issue: key='RPA-1986', id='342208'>, <JIRA Issue: key='RPA-1987', id='342209'>, <JIRA Issue: key='RPA-1978', id='341843'>, <JIRA Issue: key='RPA-1894', id='340811'>, <JIRA Issue: key='RPA-1979', id='341958'>, <JIRA Issue: key='RPA-1832', id='339414'>, <JIRA Issue: key='RPA-1814', id='338314'>, <JIRA Issue: key='RPA-1757', id='336570'>, <JIRA Issue: key='RPA-1661', id='334247'>, <JIRA Issue: key='RPA-1743', id='335557'>, <JIRA Issue: key='RPA-1895', id='340826'>, <JIRA Issue: key='RPA-2947', id='366906'>, <JIRA Issue: key='RPA-2869', id='365233'>, <JIRA Issue: key='RPA-3019', id='369266'>, <JIRA Issue: key='RPA-2848', id='364345'>, <JIRA Issue: key='RPA-2401', id='350827'>, <JIRA Issue: key='RPA-3115', id='371026'>, <JIRA Issue: key='RPA-3072', id='369984'>, <JIRA Issue: key='RPA-3116', id='371027'>, <JIRA Issue: key='RPA-3092', id='370245'>, <JIRA Issue: key='RPA-1695', id='335180'>, <JIRA Issue: key='RPA-1660', id='334154'>, <JIRA Issue: key='RPA-1658', id='334120'>, <JIRA Issue: key='RPA-1523', id='330086'>, <JIRA Issue: key='RPA-1485', id='329407'>, <JIRA Issue: key='RPA-1483', id='329400'>, <JIRA Issue: key='RPA-1531', id='330537'>, <JIRA Issue: key='RPA-1530', id='330536'>, <JIRA Issue: key='RPA-1529', id='330534'>, <JIRA Issue: key='RPA-1472', id='329309'>, <JIRA Issue: key='RPA-1471', id='329308'>, <JIRA Issue: key='RPA-1520', id='329989'>, <JIRA Issue: key='RPA-1441', id='328746'>, <JIRA Issue: key='RPA-1442', id='328871'>, <JIRA Issue: key='RPA-1460', id='329228'>, <JIRA Issue: key='RPA-1518', id='329713'>, <JIRA Issue: key='RPA-1400', id='328379'>, <JIRA Issue: key='RPA-1522', id='330029'>, <JIRA Issue: key='RPA-1486', id='329409'>, <JIRA Issue: key='RPA-1521', id='330006'>, <JIRA Issue: key='RPA-1519', id='329968'>, <JIRA Issue: key='RPA-1304', id='327420'>, <JIRA Issue: key='RPA-1294', id='326991'>, <JIRA Issue: key='RPA-1244', id='325933'>, <JIRA Issue: key='RPA-1243', id='325826'>, <JIRA Issue: key='RPA-1229', id='325721'>, <JIRA Issue: key='RPA-1228', id='325650'>, <JIRA Issue: key='RPA-1220', id='325259'>, <JIRA Issue: key='RPA-1186', id='324098'>, <JIRA Issue: key='RPA-1374', id='327995'>, <JIRA Issue: key='RPA-1143', id='322714'>, <JIRA Issue: key='RPA-1569', id='331646'>, <JIRA Issue: key='RPA-1461', id='329229'>, <JIRA Issue: key='RPA-1561', id='331202'>, <JIRA Issue: key='RPA-984', id='313227'>, <JIRA Issue: key='RPA-1107', id='321793'>, <JIRA Issue: key='RPA-1129', id='322249'>, <JIRA Issue: key='RPA-1130', id='322250'>, <JIRA Issue: key='RPA-1183', id='324051'>, <JIRA Issue: key='RPA-1091', id='321636'>, <JIRA Issue: key='RPA-1086', id='321627'>, <JIRA Issue: key='RPA-1087', id='321631'>, <JIRA Issue: key='RPA-1085', id='321492'>, <JIRA Issue: key='RPA-1084', id='321489'>, <JIRA Issue: key='RPA-1070', id='319182'>, <JIRA Issue: key='RPA-1068', id='319168'>, <JIRA Issue: key='RPA-1067', id='319167'>, <JIRA Issue: key='RPA-1066', id='319166'>, <JIRA Issue: key='RPA-1128', id='322054'>, <JIRA Issue: key='RPA-1065', id='319165'>, <JIRA Issue: key='RPA-1063', id='319100'>, <JIRA Issue: key='RPA-1062', id='319096'>, <JIRA Issue: key='RPA-1060', id='318943'>, <JIRA Issue: key='RPA-1059', id='318941'>, <JIRA Issue: key='RPA-1058', id='318940'>, <JIRA Issue: key='RPA-1057', id='318938'>, <JIRA Issue: key='RPA-1056', id='318815'>, <JIRA Issue: key='RPA-1053', id='318648'>, <JIRA Issue: key='RPA-1051', id='318517'>, <JIRA Issue: key='RPA-1052', id='318525'>, <JIRA Issue: key='RPA-1040', id='317832'>, <JIRA Issue: key='RPA-1036', id='317826'>, <JIRA Issue: key='RPA-1038', id='317830'>, <JIRA Issue: key='RPA-1027', id='317342'>, <JIRA Issue: key='RPA-1026', id='317311'>, <JIRA Issue: key='RPA-1030', id='317405'>, <JIRA Issue: key='RPA-1031', id='317406'>, <JIRA Issue: key='RPA-1032', id='317407'>, <JIRA Issue: key='RPA-1041', id='318073'>, <JIRA Issue: key='RPA-1039', id='317831'>, <J"]
+* function duration: 0.677743s       | * time elapsed: 71.846671s     
+* success: false  
+* output: AttributeError
+Python 3.11.4: d:\RPA\template\venv-template\Scripts\python.exe
+Tue Sep  5 18:04:40 2023
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\RPA\template\Assets\Libraries\RPA\logger.py in inner(*args=([<JIRA Issue: key='RPA-2892', id='366003'>, <JIRA Issue: key='RPA-2865', id='365158'>, <JIRA Issue: key='RPA-2855', id='364948'>, <JIRA Issue: key='RPA-2806', id='362661'>, <JIRA Issue: key='RPA-2851', id='364362'>, <JIRA Issue: key='RPA-2850', id='364358'>, <JIRA Issue: key='RPA-2726', id='358985'>, <JIRA Issue: key='RPA-2647', id='357242'>, <JIRA Issue: key='RPA-2636', id='356676'>, <JIRA Issue: key='RPA-2590', id='355709'>, <JIRA Issue: key='RPA-2721', id='358895'>, <JIRA Issue: key='RPA-2697', id='357913'>, <JIRA Issue: key='RPA-2821', id='363385'>, <JIRA Issue: key='RPA-2791', id='361579'>, <JIRA Issue: key='RPA-2785', id='361026'>, <JIRA Issue: key='RPA-2798', id='361693'>, <JIRA Issue: key='RPA-2775', id='360673'>, <JIRA Issue: key='RPA-2730', id='359744'>, <JIRA Issue: key='RPA-2774', id='360670'>, <JIRA Issue: key='RPA-2773', id='360631'>, ...],), **kwargs={})
+   90                         f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao
+f_result undefined
+f = <function P003_Write_Issues_To_File.T01_Write_Issues_To_File>
+args = ([<JIRA Issue: key='RPA-2892', id='366003'>, <JIRA Issue: key='RPA-2865', id='365158'>, <JIRA Issue: key='RPA-2855', id='364948'>, <JIRA Issue: key='RPA-2806', id='362661'>, <JIRA Issue: key='RPA-2851', id='364362'>, <JIRA Issue: key='RPA-2850', id='364358'>, <JIRA Issue: key='RPA-2726', id='358985'>, <JIRA Issue: key='RPA-2647', id='357242'>, <JIRA Issue: key='RPA-2636', id='356676'>, <JIRA Issue: key='RPA-2590', id='355709'>, <JIRA Issue: key='RPA-2721', id='358895'>, <JIRA Issue: key='RPA-2697', id='357913'>, <JIRA Issue: key='RPA-2821', id='363385'>, <JIRA Issue: key='RPA-2791', id='361579'>, <JIRA Issue: key='RPA-2785', id='361026'>, <JIRA Issue: key='RPA-2798', id='361693'>, <JIRA Issue: key='RPA-2775', id='360673'>, <JIRA Issue: key='RPA-2730', id='359744'>, <JIRA Issue: key='RPA-2774', id='360670'>, <JIRA Issue: key='RPA-2773', id='360631'>, ...],)
+kwargs = {}
+
+ D:\RPA\template\p003_write_issues_to_file.py in T01_Write_Issues_To_File(issues=[<JIRA Issue: key='RPA-2892', id='366003'>, <JIRA Issue: key='RPA-2865', id='365158'>, <JIRA Issue: key='RPA-2855', id='364948'>, <JIRA Issue: key='RPA-2806', id='362661'>, <JIRA Issue: key='RPA-2851', id='364362'>, <JIRA Issue: key='RPA-2850', id='364358'>, <JIRA Issue: key='RPA-2726', id='358985'>, <JIRA Issue: key='RPA-2647', id='357242'>, <JIRA Issue: key='RPA-2636', id='356676'>, <JIRA Issue: key='RPA-2590', id='355709'>, <JIRA Issue: key='RPA-2721', id='358895'>, <JIRA Issue: key='RPA-2697', id='357913'>, <JIRA Issue: key='RPA-2821', id='363385'>, <JIRA Issue: key='RPA-2791', id='361579'>, <JIRA Issue: key='RPA-2785', id='361026'>, <JIRA Issue: key='RPA-2798', id='361693'>, <JIRA Issue: key='RPA-2775', id='360673'>, <JIRA Issue: key='RPA-2730', id='359744'>, <JIRA Issue: key='RPA-2774', id='360670'>, <JIRA Issue: key='RPA-2773', id='360631'>, ...])
+   18         WriteObjectToFile(Settings.Files["jiraIssues"],issues)
+global WriteObjectToFile = <function WriteObjectToFile>
+global Settings = <class 'Assets.Libraries.cfg.Settings'>
+Settings.Files undefined
+issues = [<JIRA Issue: key='RPA-2892', id='366003'>, <JIRA Issue: key='RPA-2865', id='365158'>, <JIRA Issue: key='RPA-2855', id='364948'>, <JIRA Issue: key='RPA-2806', id='362661'>, <JIRA Issue: key='RPA-2851', id='364362'>, <JIRA Issue: key='RPA-2850', id='364358'>, <JIRA Issue: key='RPA-2726', id='358985'>, <JIRA Issue: key='RPA-2647', id='357242'>, <JIRA Issue: key='RPA-2636', id='356676'>, <JIRA Issue: key='RPA-2590', id='355709'>, <JIRA Issue: key='RPA-2721', id='358895'>, <JIRA Issue: key='RPA-2697', id='357913'>, <JIRA Issue: key='RPA-2821', id='363385'>, <JIRA Issue: key='RPA-2791', id='361579'>, <JIRA Issue: key='RPA-2785', id='361026'>, <JIRA Issue: key='RPA-2798', id='361693'>, <JIRA Issue: key='RPA-2775', id='360673'>, <JIRA Issue: key='RPA-2730', id='359744'>, <JIRA Issue: key='RPA-2774', id='360670'>, <JIRA Issue: key='RPA-2773', id='360631'>, ...]
+AttributeError: type object 'Settings' has no attribute 'Files'
+    __cause__ = None
+    __class__ = <class 'AttributeError'>
+    __context__ = None
+    __delattr__ = <method-wrapper '__delattr__' of AttributeError object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of AttributeError object>
+    __doc__ = 'Attribute not found.'
+    __eq__ = <method-wrapper '__eq__' of AttributeError object>
+    __format__ = <built-in method __format__ of AttributeError object>
+    __ge__ = <method-wrapper '__ge__' of AttributeError object>
+    __getattribute__ = <method-wrapper '__getattribute__' of AttributeError object>
+    __getstate__ = <built-in method __getstate__ of AttributeError object>
+    __gt__ = <method-wrapper '__gt__' of AttributeError object>
+    __hash__ = <method-wrapper '__hash__' of AttributeError object>
+    __init__ = <method-wrapper '__init__' of AttributeError object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of AttributeError object>
+    __lt__ = <method-wrapper '__lt__' of AttributeError object>
+    __ne__ = <method-wrapper '__ne__' of AttributeError object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of AttributeError object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of AttributeError object>
+    __repr__ = <method-wrapper '__repr__' of AttributeError object>
+    __setattr__ = <method-wrapper '__setattr__' of AttributeError object>
+    __setstate__ = <built-in method __setstate__ of AttributeError object>
+    __sizeof__ = <built-in method __sizeof__ of AttributeError object>
+    __str__ = <method-wrapper '__str__' of AttributeError object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    add_note = <built-in method add_note of AttributeError object>
+    args = ("type object 'Settings' has no attribute 'Files'",)
+    name = 'Files'
+    obj = <class 'Assets.Libraries.cfg.Settings'>
+    with_traceback = <built-in method with_traceback of AttributeError object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 90, in inner
+    f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p003_write_issues_to_file.py", line 18, in T01_Write_Issues_To_File
+    WriteObjectToFile(Settings.Files["jiraIssues"],issues)
+                      ^^^^^^^^^^^^^^
+AttributeError: type object 'Settings' has no attribute 'Files'
+
+
+
+NoneType: None
+2023-09-05 18:04:40,956 [E00_GENERAL_ERROR] [E01_SEND_ERROR_REPORT]  ERROR => Send error e-mail
+
+* params: ['\n<body bgcolor="#f0f0f8">\n<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">\n<tr bgcolor="#6622aa">\n<td valign=bottom>&nbsp;<br>\n<font color="#ffffff" face="helvetica, arial">&nbsp;<br>\n<big><big><strong>AttributeError</strong></big></big></font></td>\n<td align=right valign=bottom>\n<font color="#ffffff" face="helvetica, arial">Python 3.11.4: d:\\RPA\\template\\venv-template\\Scripts\\python.exe<br>Tue Sep  5 18:04:40 2023</font></td>\n</tr></table>\n<p>A problem occurred in a Python script.  Here is the sequence of\nfunction calls leading up to the error, in the order they occurred.</p>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\p000_main.py">D:\\RPA\\template\\p000_main.py</a> in <strong>&lt;module&gt;</strong></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;13</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jira_issues&nbsp;=&nbsp;P002_Get_Jira_Issues()<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;14</small>&nbsp;<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;15</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P003_Write_Issues_To_File(jira_issues)<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;16</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;17</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terminate()<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090"><strong>P003_Write_Issues_To_File</strong>&nbsp;= &lt;class \'p003_write_issues_to_file.P003_Write_Issues_To_File\'&gt;, <strong>jira_issues</strong>&nbsp;= [&lt;JIRA Issue: key=\'RPA-2892\', id=\'366003\'&gt;, &lt;JIRA Issue: key=\'RPA-2865\', id=\'365158\'&gt;, &lt;JIRA Issue: key=\'RPA-2855\', id=\'364948\'&gt;, &lt;JIRA Issue: key=\'RPA-2806\', id=\'362661\'&gt;, &lt;JIRA Issue: key=\'RPA-2851\', id=\'364362\'&gt;, &lt;JIRA Issue: key=\'RPA-2850\', id=\'364358\'&gt;, &lt;JIRA Issue: key=\'RPA-2726\', id=\'358985\'&gt;, &lt;JIRA Issue: key=\'RPA-2647\', id=\'357242\'&gt;, &lt;JIRA Issue: key=\'RPA-2636\', id=\'356676\'&gt;, &lt;JIRA Issue: key=\'RPA-2590\', id=\'355709\'&gt;, &lt;JIRA Issue: key=\'RPA-2721\', id=\'358895\'&gt;, &lt;JIRA Issue: key=\'RPA-2697\', id=\'357913\'&gt;, &lt;JIRA Issue: key=\'RPA-2821\', id=\'363385\'&gt;, &lt;JIRA Issue: key=\'RPA-2791\', id=\'361579\'&gt;, &lt;JIRA Issue: key=\'RPA-2785\', id=\'361026\'&gt;, &lt;JIRA Issue: key=\'RPA-2798\', id=\'361693\'&gt;, &lt;JIRA Issue: key=\'RPA-2775\', id=\'360673\'&gt;, &lt;JIRA Issue: key=\'RPA-2730\', id=\'359744\'&gt;, &lt;JIRA Issue: key=\'RPA-2774\', id=\'360670\'&gt;, &lt;JIRA Issue: key=\'RPA-2773\', id=\'360631\'&gt;, ...]</font></small></td></tr></table>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\p003_write_issues_to_file.py">D:\\RPA\\template\\p003_write_issues_to_file.py</a> in <strong>__new__</strong>(self=&lt;class \'p003_write_issues_to_file.P003_Write_Issues_To_File\'&gt;, issues=[&lt;JIRA Issue: key=\'RPA-2892\', id=\'366003\'&gt;, &lt;JIRA Issue: key=\'RPA-2865\', id=\'365158\'&gt;, &lt;JIRA Issue: key=\'RPA-2855\', id=\'364948\'&gt;, &lt;JIRA Issue: key=\'RPA-2806\', id=\'362661\'&gt;, &lt;JIRA Issue: key=\'RPA-2851\', id=\'364362\'&gt;, &lt;JIRA Issue: key=\'RPA-2850\', id=\'364358\'&gt;, &lt;JIRA Issue: key=\'RPA-2726\', id=\'358985\'&gt;, &lt;JIRA Issue: key=\'RPA-2647\', id=\'357242\'&gt;, &lt;JIRA Issue: key=\'RPA-2636\', id=\'356676\'&gt;, &lt;JIRA Issue: key=\'RPA-2590\', id=\'355709\'&gt;, &lt;JIRA Issue: key=\'RPA-2721\', id=\'358895\'&gt;, &lt;JIRA Issue: key=\'RPA-2697\', id=\'357913\'&gt;, &lt;JIRA Issue: key=\'RPA-2821\', id=\'363385\'&gt;, &lt;JIRA Issue: key=\'RPA-2791\', id=\'361579\'&gt;, &lt;JIRA Issue: key=\'RPA-2785\', id=\'361026\'&gt;, &lt;JIRA Issue: key=\'RPA-2798\', id=\'361693\'&gt;, &lt;JIRA Issue: key=\'RPA-2775\', id=\'360673\'&gt;, &lt;JIRA Issue: key=\'RPA-2730\', id=\'359744\'&gt;, &lt;JIRA Issue: key=\'RPA-2774\', id=\'360670\'&gt;, &lt;JIRA Issue: key=\'RPA-2773\', id=\'360631\'&gt;, ...])</td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;10</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;__new__(self,&nbsp;issues):<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;11</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;12</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.T01_Write_Issues_To_File(issues)<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;13</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;14</small>&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;class \'p003_write_issues_to_file.P003_Write_Issues_To_File\'&gt;, self.<strong>T01_Write_Issues_To_File</strong>&nbsp;= &lt;function RPALogging.Task.&lt;locals&gt;.inner&gt;, <strong>issues</strong>&nbsp;= [&lt;JIRA Issue: key=\'RPA-2892\', id=\'366003\'&gt;, &lt;JIRA Issue: key=\'RPA-2865\', id=\'365158\'&gt;, &lt;JIRA Issue: key=\'RPA-2855\', id=\'364948\'&gt;, &lt;JIRA Issue: key=\'RPA-2806\', id=\'362661\'&gt;, &lt;JIRA Issue: key=\'RPA-2851\', id=\'364362\'&gt;, &lt;JIRA Issue: key=\'RPA-2850\', id=\'364358\'&gt;, &lt;JIRA Issue: key=\'RPA-2726\', id=\'358985\'&gt;, &lt;JIRA Issue: key=\'RPA-2647\', id=\'357242\'&gt;, &lt;JIRA Issue: key=\'RPA-2636\', id=\'356676\'&gt;, &lt;JIRA Issue: key=\'RPA-2590\', id=\'355709\'&gt;, &lt;JIRA Issue: key=\'RPA-2721\', id=\'358895\'&gt;, &lt;JIRA Issue: key=\'RPA-2697\', id=\'357913\'&gt;, &lt;JIRA Issue: key=\'RPA-2821\', id=\'363385\'&gt;, &lt;JIRA Issue: key=\'RPA-2791\', id=\'361579\'&gt;, &lt;JIRA Issue: key=\'RPA-2785\', id=\'361026\'&gt;, &lt;JIRA Issue: key=\'RPA-2798\', id=\'361693\'&gt;, &lt;JIRA Issue: key=\'RPA-2775\', id=\'360673\'&gt;, &lt;JIRA Issue: key=\'RPA-2730\', id=\'359744\'&gt;, &lt;JIRA Issue: key=\'RPA-2774\', id=\'360670\'&gt;, &lt;JIRA Issue: key=\'RPA-2773\', id=\'360631\'&gt;, ...]</font></small></td></tr></table>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py">D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py</a> in <strong>inner</strong>(*args=([&lt;JIRA Issue: key=\'RPA-2892\', id=\'366003\'&gt;, &lt;JIRA Issue: key=\'RPA-2865\', id=\'365158\'&gt;, &lt;JIRA Issue: key=\'RPA-2855\', id=\'364948\'&gt;, &lt;JIRA Issue: key=\'RPA-2806\', id=\'362661\'&gt;, &lt;JIRA Issue: key=\'RPA-2851\', id=\'364362\'&gt;, &lt;JIRA Issue: key=\'RPA-2850\', id=\'364358\'&gt;, &lt;JIRA Issue: key=\'RPA-2726\', id=\'358985\'&gt;, &lt;JIRA Issue: key=\'RPA-2647\', id=\'357242\'&gt;, &lt;JIRA Issue: key=\'RPA-2636\', id=\'356676\'&gt;, &lt;JIRA Issue: key=\'RPA-2590\', id=\'355709\'&gt;, &lt;JIRA Issue: key=\'RPA-2721\', id=\'358895\'&gt;, &lt;JIRA Issue: key=\'RPA-2697\', id=\'357913\'&gt;, &lt;JIRA Issue: key=\'RPA-2821\', id=\'363385\'&gt;, &lt;JIRA Issue: key=\'RPA-2791\', id=\'361579\'&gt;, &lt;JIRA Issue: key=\'RPA-2785\', id=\'361026\'&gt;, &lt;JIRA Issue: key=\'RPA-2798\', id=\'361693\'&gt;, &lt;JIRA Issue: key=\'RPA-2775\', id=\'360673\'&gt;, &lt;JIRA Issue: key=\'RPA-2730\', id=\'359744\'&gt;, &lt;JIRA Issue: key=\'RPA-2774\', id=\'360670\'&gt;, &lt;JIRA Issue: key=\'RPA-2773\', id=\'360631\'&gt;, ...],), **kwargs={})</td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;139</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;140</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#propaga&nbsp;a&nbsp;exceçao<br>\n</tt></font></td></tr>\n<tr>', 'Traceback (most recent call last):\n  File "D:\\RPA\\template\\p000_main.py", line 15, in <module>\n    P003_Write_Issues_To_File(jira_issues)\n  File "D:\\RPA\\template\\p003_write_issues_to_file.py", line 12, in __new__\n    self.T01_Write_Issues_To_File(issues)\n  File "D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py", line 141, in inner\n    raise error\n  File "D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py", line 90, in inner\n    f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao\n               ^^^^^^^^^^^^^^^^^^\n  File "D:\\RPA\\template\\p003_write_issues_to_file.py", line 18, in T01_Write_Issues_To_File\n    WriteObjectToFile(Settings.Files["jiraIssues"],issues)\n                      ^^^^^^^^^^^^^^\nAttributeError: type object \'Settings\' has no attribute \'Files\'\n']
+* function duration: 0.090380s       | * time elapsed: 71.951208s     
+* success: false  
+* output: AttributeError
+Python 3.11.4: d:\RPA\template\venv-template\Scripts\python.exe
+Tue Sep  5 18:04:40 2023
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\RPA\template\Assets\Libraries\RPA\logger.py in inner(*args=('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce... object \'Settings\' has no attribute \'Files\'\n\n-->\n', 'Traceback (most recent call last):\n  File "D:\\RP... type object \'Settings\' has no attribute \'Files\'\n'), **kwargs={})
+   90                         f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao
+f_result undefined
+f = <function E00_General_Error.E01_Send_Error_Report>
+args = ('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce... object \'Settings\' has no attribute \'Files\'\n\n-->\n', 'Traceback (most recent call last):\n  File "D:\\RP... type object \'Settings\' has no attribute \'Files\'\n')
+kwargs = {}
+
+ D:\RPA\template\Events\e000_general.py in E01_Send_Error_Report(error_html='\n<body bgcolor="#f0f0f8">\n<table width="100%" ce... object \'Settings\' has no attribute \'Files\'\n\n-->\n', traceback='Traceback (most recent call last):\n  File "D:\\RP... type object \'Settings\' has no attribute \'Files\'\n')
+   32             Settings.ErrorEmail['receivers'],
+global Settings = <class 'Assets.Libraries.cfg.Settings'>
+Settings.ErrorEmail undefined
+AttributeError: type object 'Settings' has no attribute 'ErrorEmail'
+    __cause__ = None
+    __class__ = <class 'AttributeError'>
+    __context__ = AttributeError("type object 'Settings' has no attribute 'Files'")
+    __delattr__ = <method-wrapper '__delattr__' of AttributeError object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of AttributeError object>
+    __doc__ = 'Attribute not found.'
+    __eq__ = <method-wrapper '__eq__' of AttributeError object>
+    __format__ = <built-in method __format__ of AttributeError object>
+    __ge__ = <method-wrapper '__ge__' of AttributeError object>
+    __getattribute__ = <method-wrapper '__getattribute__' of AttributeError object>
+    __getstate__ = <built-in method __getstate__ of AttributeError object>
+    __gt__ = <method-wrapper '__gt__' of AttributeError object>
+    __hash__ = <method-wrapper '__hash__' of AttributeError object>
+    __init__ = <method-wrapper '__init__' of AttributeError object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of AttributeError object>
+    __lt__ = <method-wrapper '__lt__' of AttributeError object>
+    __ne__ = <method-wrapper '__ne__' of AttributeError object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of AttributeError object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of AttributeError object>
+    __repr__ = <method-wrapper '__repr__' of AttributeError object>
+    __setattr__ = <method-wrapper '__setattr__' of AttributeError object>
+    __setstate__ = <built-in method __setstate__ of AttributeError object>
+    __sizeof__ = <built-in method __sizeof__ of AttributeError object>
+    __str__ = <method-wrapper '__str__' of AttributeError object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    add_note = <built-in method add_note of AttributeError object>
+    args = ("type object 'Settings' has no attribute 'ErrorEmail'",)
+    name = 'ErrorEmail'
+    obj = <class 'Assets.Libraries.cfg.Settings'>
+    with_traceback = <built-in method with_traceback of AttributeError object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\p000_main.py", line 15, in <module>
+    P003_Write_Issues_To_File(jira_issues)
+  File "D:\RPA\template\p003_write_issues_to_file.py", line 12, in __new__
+    self.T01_Write_Issues_To_File(issues)
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 141, in inner
+    raise error
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 90, in inner
+    f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p003_write_issues_to_file.py", line 18, in T01_Write_Issues_To_File
+    WriteObjectToFile(Settings.Files["jiraIssues"],issues)
+                      ^^^^^^^^^^^^^^
+AttributeError: type object 'Settings' has no attribute 'Files'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 90, in inner
+    f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Events\e000_general.py", line 32, in E01_Send_Error_Report
+    Settings.ErrorEmail['receivers'],
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Settings' has no attribute 'ErrorEmail'
+
+
+
+Traceback (most recent call last):
+  File "D:\RPA\template\p000_main.py", line 15, in <module>
+    P003_Write_Issues_To_File(jira_issues)
+  File "D:\RPA\template\p003_write_issues_to_file.py", line 12, in __new__
+    self.T01_Write_Issues_To_File(issues)
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 141, in inner
+    raise error
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 90, in inner
+    f_result = f(*args, **kwargs)     # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p003_write_issues_to_file.py", line 18, in T01_Write_Issues_To_File
+    WriteObjectToFile(Settings.Files["jiraIssues"],issues)
+                      ^^^^^^^^^^^^^^
+AttributeError: type object 'Settings' has no attribute 'Files'

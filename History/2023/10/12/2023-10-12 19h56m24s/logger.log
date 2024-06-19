@@ -1,0 +1,32 @@
+2023-10-12 19:56:25,780 [START] INFO => Process started by diana.s. Args: ['D:\\RPA\\template\\p000_main.py', 'false']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2023-10-12 19:56:25,841 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.046135s       | * time elapsed: 1.056237s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2023-10-12 19:59:38,117 [P001_PROJECT_SETUP] [T02_CREATE_JIRA_INSTANCE]  INFO => None
+
+* params: []      
+* function duration: 192.277557s     | * time elapsed: 193.334894s    
+* success: true   
+* output: Instância do jira criada no servidor https://jira.sidi.org.br. Cookies: [{'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'atlassian.xsrf.token', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'BOFA-3JJM-HPI5-RE06_e7256eef1035e1d2f1cdb8084f48cab9346eec7b_lout'}, {'domain': 'jira.sidi.org.br', 'httpOnly': True, 'name': 'JSESSIONID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'E2B57F2A68549083ACCE15C0EB1EB03D'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAccessCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|K+UZEgVYfiL4LibQZNM7zg5rCQbHr4Sf1lTiglEiQ/hDFPMSJN2yLwhKbVZA+2jJWqT9pYj2C5AIaFvuKoogfSeXARKZ7DwwsXFiSY4hWJZK1+IH6Dus2jFpMi31cieTQ0LBlaIDHS9mXglrlqXNREmSikwobhDfiY4+nhE2RhdRlmGZhD3jPZKgU/O2V6pOT6j+EDrOiuJAMD9MbrbkSY2Xisf0FeVJIjuHaAMonyvgIuvZ+7B+BIZfSUfDNmh08DdFJBrJrHDFyB9v/DfpyUrMRRmTwxWAmMU+JflAuYzQGjINMlcuHx4BjH/Yej8EhH5UYMUeqQ6o5qqPLugnf3bnzZoU8GJtUwJKUa9XpVL/ckZIufFUlMyKGYFPV1jKPQyd4Ic8XuUfYyRWNtFJAKd0bS0d/5A1TjVdGFv83gHlb5Y6zI4WJLR2qieUyoTRmEWNpTI2eHTm7xPLSq9soQ=='}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAnalyticCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_https_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|aKKH0CldKmWBXKJ4v04KZd8XpANWfzs9vrWT2gqoc0zYl74jiwnC08qIwmsnj78C4EgMe23+XrfxQhLpb14hQM9tXz0sqa7hjHzVj/ePMJ1AavfHJ8AXZDyAHrsRC2TSPvaWYxOdI1NhjmJm4dKj3g=='}, {'domain': 'jira.sidi.org.br', 'expiry': 1697152121, 'httpOnly': False, 'name': 'AzureAppProxyPreauthSessionCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_d2b9d143-28f6-4100-8108-83cdb4fb8394_1.4', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|PR2VrL5HpmKQstW+sma1p/EIFCyO8gZUov/MdDiBVpG380LXzAQsCCFUAVhlP7WOH8F0+IzS3FDCslXzUSRNBfGuLd4vaNmz0Lm+W5034fjMMN4wURVc7+FBWCo9D9cAX4DMDo0KlLcsv4g5A2dNXclIBfumrvBsgaNSDZcwBXXK2KWCm9rNH+mHHHeii1wT8XjYR4sCjjvS5ya7w8uAfbMXpxEFmtr2UU6EKrGrFg1GdjhdB9X5t384vZKKmEycwUCJtZTROznZTi7htHzBUQ=='}].
+
+
+2023-10-12 20:00:06,121 [P002_GET_JIRA_ISSUES] [T02_GET_JIRA_ISSUES]  INFO =>  Get Jira Reimbursement issues 
+
+* params: []      
+* function duration: 27.993151s      | * time elapsed: 221.333752s    
+* success: true   
+* output: 343 issues encontradas.
+
+

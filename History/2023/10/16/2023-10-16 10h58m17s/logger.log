@@ -1,0 +1,359 @@
+2023-10-16 10:58:18,718 [START] INFO => Process started by diana.s. Args: ['D:\\RPA\\template\\p000_main.py', 'false']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2023-10-16 10:58:18,797 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.077382s       | * time elapsed: 1.349442s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2023-10-16 10:59:35,688 [P001_PROJECT_SETUP] [T02_CREATE_JIRA_INSTANCE]  ERROR => None
+
+* params: []      
+* function duration: 76.886078s      | * time elapsed: 78.236766s     
+* success: false  
+* output: Exception
+Python 3.11.4: d:\RPA\template\venv-template\Scripts\python.exe
+Mon Oct 16 10:59:35 2023
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\RPA\template\Assets\Libraries\RPA\logger.py in inner(*args=(), **kwargs={})
+   88                 f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+f_result undefined
+f = <function P001_Project_Setup.T02_Create_Jira_Instance>
+args = ()
+kwargs = {}
+
+ D:\RPA\template\p001_project_setup.py in T02_Create_Jira_Instance()
+   42         Global.jira : JIRA = CreateJiraInstance(jira_cookies, credential = Credentials.jira)  # Cria uma nova instância do Jira
+global Global = <class 'Assets.Libraries.cfg.Global'>
+Global.jira undefined
+global JIRA = <class 'jira.client.JIRA'>
+global CreateJiraInstance = <function CreateJiraInstance>
+jira_cookies = [{'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'atlassian.xsrf.token', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'BOFA-3JJM-HPI5-RE06_df0829d738763a6d86b01d324227c34a21d2cbea_lout'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAnalyticCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_https_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|G1ebel9Yvhky1RVUE4+rtTgpWgH78KrBh3Q6W2wteSuPm0...J87bgcphcTUoMDn4D+rY2Npw16waxrr20vbeOU5LdkYgkmg=='}, {'domain': 'jira.sidi.org.br', 'httpOnly': True, 'name': 'JSESSIONID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'AFF15E9651926491FD4721E1378B161C'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAccessCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|mwsgrkwI2yWwuJxdPcYFMEY+sisJE1CauaKISIblE3Bm2d...9XNygxn+eH4fH/BGYjuu5DWIK95SEerfLczxJtZLD37rTyQ=='}, {'domain': 'jira.sidi.org.br', 'expiry': 1697465331, 'httpOnly': False, 'name': 'AzureAppProxyPreauthSessionCookie_08cb1455-5466-...d6b431de_3056118b-6721-4c4c-baa2-1be762676e79_1.4', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|A4QYn+22Y+vDa2RfUQ04Zu7hMWpMhok2GxQVr1D3HERyMo...ZZ+Cbe1XTB6lkSsqjIeeuw93A2hXK7j7UnDAHeq3YFUlnxA=='}]
+credential undefined
+global Credentials = <class 'Assets.Libraries.credentials.Credentials'>
+Credentials.jira = <Assets.Libraries.RPA.Cryptography.security.Credential object>
+
+ D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py in inner(*args=([{'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'atlassian.xsrf.token', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'BOFA-3JJM-HPI5-RE06_df0829d738763a6d86b01d324227c34a21d2cbea_lout'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAnalyticCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_https_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|G1ebel9Yvhky1RVUE4+rtTgpWgH78KrBh3Q6W2wteSuPm0...J87bgcphcTUoMDn4D+rY2Npw16waxrr20vbeOU5LdkYgkmg=='}, {'domain': 'jira.sidi.org.br', 'httpOnly': True, 'name': 'JSESSIONID', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': 'AFF15E9651926491FD4721E1378B161C'}, {'domain': 'jira.sidi.org.br', 'httpOnly': False, 'name': 'AzureAppProxyAccessCookie_08cb1455-5466-45eb-aaeb-8e32d6b431de_1.3', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|mwsgrkwI2yWwuJxdPcYFMEY+sisJE1CauaKISIblE3Bm2d...9XNygxn+eH4fH/BGYjuu5DWIK95SEerfLczxJtZLD37rTyQ=='}, {'domain': 'jira.sidi.org.br', 'expiry': 1697465331, 'httpOnly': False, 'name': 'AzureAppProxyPreauthSessionCookie_08cb1455-5466-...d6b431de_3056118b-6721-4c4c-baa2-1be762676e79_1.4', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '4|A4QYn+22Y+vDa2RfUQ04Zu7hMWpMhok2GxQVr1D3HERyMo...ZZ+Cbe1XTB6lkSsqjIeeuw93A2hXK7j7UnDAHeq3YFUlnxA=='}],), **kwargs={'credential': <Assets.Libraries.RPA.Cryptography.security.Credential object>, 'decrypted_credential': <Assets.Libraries.RPA.Cryptography.security.Credential object>})
+   93                 raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+builtinException = <class 'Exception'>
+Exception: Houve um erro na chamada da função CREATEJIRAINSTANCE.
+    __cause__ = None
+    __class__ = <class 'Exception'>
+    __context__ = JSONDecodeError('Expecting value: line 3 column 1 (char 4)')
+    __delattr__ = <method-wrapper '__delattr__' of Exception object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of Exception object>
+    __doc__ = 'Common base class for all non-exit exceptions.'
+    __eq__ = <method-wrapper '__eq__' of Exception object>
+    __format__ = <built-in method __format__ of Exception object>
+    __ge__ = <method-wrapper '__ge__' of Exception object>
+    __getattribute__ = <method-wrapper '__getattribute__' of Exception object>
+    __getstate__ = <built-in method __getstate__ of Exception object>
+    __gt__ = <method-wrapper '__gt__' of Exception object>
+    __hash__ = <method-wrapper '__hash__' of Exception object>
+    __init__ = <method-wrapper '__init__' of Exception object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of Exception object>
+    __lt__ = <method-wrapper '__lt__' of Exception object>
+    __ne__ = <method-wrapper '__ne__' of Exception object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of Exception object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of Exception object>
+    __repr__ = <method-wrapper '__repr__' of Exception object>
+    __setattr__ = <method-wrapper '__setattr__' of Exception object>
+    __setstate__ = <built-in method __setstate__ of Exception object>
+    __sizeof__ = <built-in method __sizeof__ of Exception object>
+    __str__ = <method-wrapper '__str__' of Exception object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    add_note = <built-in method add_note of Exception object>
+    args = ('Houve um erro na chamada da função CREATEJIRAINSTANCE.',)
+    with_traceback = <built-in method with_traceback of Exception object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 65, in inner
+    result = f(*args, **kwargs)  # Chama a função, passando seus argumentos originais (que já contém a credencial criptografada)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\Auth\session.py", line 37, in CreateJiraInstance
+    return JIRA(
+           ^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 580, in __init__
+    si = self.server_info()
+         ^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3120, in server_info
+    j = self._get_json("serverInfo")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3858, in _get_json
+    raise e
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3855, in _get_json
+    r_json = json_loads(r)
+             ^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\utils\__init__.py", line 76, in json_loads
+    return resp.json()
+           ^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 88, in inner
+    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p001_project_setup.py", line 42, in T02_Create_Jira_Instance
+    Global.jira : JIRA = CreateJiraInstance(jira_cookies, credential = Credentials.jira)  # Cria uma nova instância do Jira
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 93, in inner
+    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+Exception: Houve um erro na chamada da função CREATEJIRAINSTANCE.
+
+
+
+NoneType: None
+2023-10-16 10:59:35,965 [E00_GENERAL_ERROR] [E01_SEND_ERROR_REPORT]  ERROR => Envia email de erro
+
+* params: ['\n<body bgcolor="#f0f0f8">\n<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">\n<tr bgcolor="#6622aa">\n<td valign=bottom>&nbsp;<br>\n<font color="#ffffff" face="helvetica, arial">&nbsp;<br>\n<big><big><strong>Exception</strong></big></big></font></td>\n<td align=right valign=bottom>\n<font color="#ffffff" face="helvetica, arial">Python 3.11.4: d:\\RPA\\template\\venv-template\\Scripts\\python.exe<br>Mon Oct 16 10:59:35 2023</font></td>\n</tr></table>\n<p>A problem occurred in a Python script.  Here is the sequence of\nfunction calls leading up to the error, in the order they occurred.</p>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\p000_main.py">D:\\RPA\\template\\p000_main.py</a> in <strong>&lt;module&gt;</strong></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;10</small>&nbsp;try:<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;11</small>&nbsp;<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;12</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P001_Project_Setup()<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;13</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;14</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;key&nbsp;in&nbsp;Settings.jira_api["GetIssues"]["queries"].keys():<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090"><strong>P001_Project_Setup</strong>&nbsp;= &lt;class \'p001_project_setup.P001_Project_Setup\'&gt;</font></small></td></tr></table>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\p001_project_setup.py">D:\\RPA\\template\\p001_project_setup.py</a> in <strong>__new__</strong>(self=&lt;class \'p001_project_setup.P001_Project_Setup\'&gt;)</td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;19</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;20</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.T01_Project_Setup()<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;21</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.T02_Create_Jira_Instance()<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;22</small>&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;23</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;T01_Project_Setup():<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090"><strong>self</strong>&nbsp;= &lt;class \'p001_project_setup.P001_Project_Setup\'&gt;, self.<strong>T02_Create_Jira_Instance</strong>&nbsp;= &lt;function RPALogging.Task.&lt;locals&gt;.inner&gt;</font></small></td></tr></table>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py">D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py</a> in <strong>inner</strong>(*args=(), **kwargs={})</td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;137</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;138</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#propaga&nbsp;a&nbsp;exceçao<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;139</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise&nbsp;error&nbsp;<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;140</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;141</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#loga&nbsp;a&nbsp;execuçao<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090"><strong>error</strong>&nbsp;= Exception(\'Houve um erro na chamada da função CREATEJIRAINSTANCE.\')</font></small></td></tr></table>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py">D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py</a> in <strong>inner</strong>(*args=(), **kwargs={})</td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;86</small>&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;87</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;88</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f_result&nbsp;=&nbsp;f(*args,&nbsp;**kwargs)&nbsp;&nbsp;#&nbsp;tenta&nbsp;executar&nbsp;a&nbsp;chamada&nbsp;da&nbsp;funçao<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;89</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;f_result<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;90</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090">f_result <em>undefined</em>, <strong>f</strong>&nbsp;= &lt;function P001_Project_Setup.T02_Create_Jira_Instance&gt;, <strong>args</strong>&nbsp;= (), <strong>kwargs</strong>&nbsp;= {}</font></small></td></tr></table>\n<table width="100%" cellspacing=0 cellpadding=0 border=0>\n<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://D:\\RPA\\template\\p001_project_setup.py">D:\\RPA\\template\\p001_project_setup.py</a> in <strong>T02_Create_Jira_Instance</strong>()</td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;40</small>&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;41</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Inicie&nbsp;uma&nbsp;sessão&nbsp;http&nbsp;autenticada&nbsp;com&nbsp;a&nbsp;API&nbsp;do&nbsp;Jira&nbsp;usando&nbsp;os&nbsp;parâmetros&nbsp;e&nbsp;cookies&nbsp;fornecidos.<br>\n</tt></font></td></tr>\n<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;42</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Global.jira&nbsp;:&nbsp;JIRA&nbsp;=&nbsp;CreateJiraInstance(jira_cookies,&nbsp;credential&nbsp;=&nbsp;Credentials.jira)&nbsp;&nbsp;#&nbsp;Cria&nbsp;uma&nbsp;nova&nbsp;instância&nbsp;do&nbsp;Jira&nbsp;&nbsp;<br>\n</tt></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;43</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;44</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Result(success&nbsp;=&nbsp;True,&nbsp;logOutput&nbsp;=&nbsp;f"Instância&nbsp;do&nbsp;jira&nbsp;criada&nbsp;no&nbsp;servidor&nbsp;{Settings.jira_url}.&nbsp;Cookies:&nbsp;{jira_cookies}."&nbsp;,&nbsp;data&nbsp;=&nbsp;None)&nbsp;&nbsp;<br>\n</tt></font></td></tr>\n<tr><td><small><font color="#909090"><em>global</em> <strong>Global</strong>&nbsp;= &lt;class \'Assets.Libraries.cfg.Global\'&gt;, Global.jira <em>undefined</em>, <em>', 'Traceback (most recent call last):\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\requests\\models.py", line 971, in json\n    return complexjson.loads(self.text, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Python311\\Lib\\json\\__init__.py", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Python311\\Lib\\json\\decoder.py", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Python311\\Lib\\json\\decoder.py", line 355, in raw_decode\n    raise JSONDecodeError("Expecting value", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 3 column 1 (char 4)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "D:\\RPA\\template\\Assets\\Libraries\\RPA\\Cryptography\\crypt.py", line 65, in inner\n    result = f(*args, **kwargs)  # Chama a função, passando seus argumentos originais (que já contém a credencial criptografada)\n             ^^^^^^^^^^^^^^^^^^\n  File "D:\\RPA\\template\\Assets\\Libraries\\Auth\\session.py", line 37, in CreateJiraInstance\n    return JIRA(\n           ^^^^^\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\jira\\client.py", line 580, in __init__\n    si = self.server_info()\n         ^^^^^^^^^^^^^^^^^^\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\jira\\client.py", line 3120, in server_info\n    j = self._get_json("serverInfo")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\jira\\client.py", line 3858, in _get_json\n    raise e\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\jira\\client.py", line 3855, in _get_json\n    r_json = json_loads(r)\n             ^^^^^^^^^^^^^\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\jira\\utils\\__init__.py", line 76, in json_loads\n    return resp.json()\n           ^^^^^^^^^^^\n  File "d:\\RPA\\template\\venv-template\\Lib\\site-packages\\requests\\models.py", line 975, in json\n    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nrequests.exceptions.JSONDecodeError: Expecting value: line 3 column 1 (char 4)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "D:\\RPA\\template\\p000_main.py", line 12, in <module>\n    P001_Project_Setup()\n  File "D:\\RPA\\template\\p001_project_setup.py", line 21, in __new__\n    self.T02_Create_Jira_Instance()\n  File "D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py", line 139, in inner\n    raise error\n  File "D:\\RPA\\template\\Assets\\Libraries\\RPA\\logger.py", line 88, in inner\n    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao\n               ^^^^^^^^^^^^^^^^^^\n  File "D:\\RPA\\template\\p001_project_setup.py", line 42, in T02_Create_Jira_Instance\n    Global.jira : JIRA = CreateJiraInstance(jira_cookies, credential = Credentials.jira)  # Cria uma nova instância do Jira\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "D:\\RPA\\template\\Assets\\Libraries\\RPA\\Cryptography\\crypt.py", line 93, in inner\n    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split(\'.\')[0]).upper()}.")\nException: Houve um erro na chamada da função CREATEJIRAINSTANCE.\n']
+* function duration: 0.262425s       | * time elapsed: 78.514496s     
+* success: false  
+* output: Exception
+Python 3.11.4: d:\RPA\template\venv-template\Scripts\python.exe
+Mon Oct 16 10:59:35 2023
+
+A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.
+
+ D:\RPA\template\Assets\Libraries\RPA\logger.py in inner(*args=('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n'), **kwargs={})
+   88                 f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+f_result undefined
+f = <function E00_General_Error.E01_Send_Error_Report>
+args = ('\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', 'Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n')
+kwargs = {}
+
+ D:\RPA\template\Events\e000_general.py in E01_Send_Error_Report(error_html='\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', traceback='Traceback (most recent call last):\n  File "d:\\RP...um erro na chamada da função CREATEJIRAINSTANCE.\n')
+   32         SendEmail(
+global SendEmail = <function SendEmail>
+global Settings = <class 'Assets.Libraries.cfg.Settings'>
+Settings.error_email = {'bccs': ['rpa.bot@sidi.org.br'], 'ccs': ['s.aguena@sidi.org.br'], 'receivers': ['diana.s@sidi.org.br'], 'subject': '[RPA Error] Template V7.0'}
+body = '\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n'
+log_zip_path = r'History\2023\10\16\log.zip'
+credential undefined
+global Credentials = <class 'Assets.Libraries.credentials.Credentials'>
+Credentials.microsoft = <Assets.Libraries.RPA.Cryptography.security.Credential object>
+
+ D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py in inner(*args=(['diana.s@sidi.org.br'], ['s.aguena@sidi.org.br'], ['rpa.bot@sidi.org.br'], '[RPA Error] Template V7.0', '\n<body bgcolor="#f0f0f8">\n<table width="100%" ce...ro na chamada da função CREATEJIRAINSTANCE.\n\n-->\n', [r'History\2023\10\16\log.zip']), **kwargs={'credential': <Assets.Libraries.RPA.Cryptography.security.Credential object>, 'decrypted_credential': <Assets.Libraries.RPA.Cryptography.security.Credential object>})
+   93                 raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+builtinException = <class 'Exception'>
+Exception: Houve um erro na chamada da função SENDEMAIL.
+    __cause__ = None
+    __class__ = <class 'Exception'>
+    __context__ = AttributeError("type object 'Global' has no attribute 'Email'")
+    __delattr__ = <method-wrapper '__delattr__' of Exception object>
+    __dict__ = {}
+    __dir__ = <built-in method __dir__ of Exception object>
+    __doc__ = 'Common base class for all non-exit exceptions.'
+    __eq__ = <method-wrapper '__eq__' of Exception object>
+    __format__ = <built-in method __format__ of Exception object>
+    __ge__ = <method-wrapper '__ge__' of Exception object>
+    __getattribute__ = <method-wrapper '__getattribute__' of Exception object>
+    __getstate__ = <built-in method __getstate__ of Exception object>
+    __gt__ = <method-wrapper '__gt__' of Exception object>
+    __hash__ = <method-wrapper '__hash__' of Exception object>
+    __init__ = <method-wrapper '__init__' of Exception object>
+    __init_subclass__ = <built-in method __init_subclass__ of type object>
+    __le__ = <method-wrapper '__le__' of Exception object>
+    __lt__ = <method-wrapper '__lt__' of Exception object>
+    __ne__ = <method-wrapper '__ne__' of Exception object>
+    __new__ = <built-in method __new__ of type object>
+    __reduce__ = <built-in method __reduce__ of Exception object>
+    __reduce_ex__ = <built-in method __reduce_ex__ of Exception object>
+    __repr__ = <method-wrapper '__repr__' of Exception object>
+    __setattr__ = <method-wrapper '__setattr__' of Exception object>
+    __setstate__ = <built-in method __setstate__ of Exception object>
+    __sizeof__ = <built-in method __sizeof__ of Exception object>
+    __str__ = <method-wrapper '__str__' of Exception object>
+    __subclasshook__ = <built-in method __subclasshook__ of type object>
+    __suppress_context__ = False
+    __traceback__ = <traceback object>
+    add_note = <built-in method add_note of Exception object>
+    args = ('Houve um erro na chamada da função SENDEMAIL.',)
+    with_traceback = <built-in method with_traceback of Exception object>
+
+The above is a description of an error in a Python program.  Here is
+the original traceback:
+
+Traceback (most recent call last):
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 65, in inner
+    result = f(*args, **kwargs)  # Chama a função, passando seus argumentos originais (que já contém a credencial criptografada)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\Auth\session.py", line 37, in CreateJiraInstance
+    return JIRA(
+           ^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 580, in __init__
+    si = self.server_info()
+         ^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3120, in server_info
+    j = self._get_json("serverInfo")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3858, in _get_json
+    raise e
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3855, in _get_json
+    r_json = json_loads(r)
+             ^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\utils\__init__.py", line 76, in json_loads
+    return resp.json()
+           ^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\p000_main.py", line 12, in <module>
+    P001_Project_Setup()
+  File "D:\RPA\template\p001_project_setup.py", line 21, in __new__
+    self.T02_Create_Jira_Instance()
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 139, in inner
+    raise error
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 88, in inner
+    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p001_project_setup.py", line 42, in T02_Create_Jira_Instance
+    Global.jira : JIRA = CreateJiraInstance(jira_cookies, credential = Credentials.jira)  # Cria uma nova instância do Jira
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 93, in inner
+    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+Exception: Houve um erro na chamada da função CREATEJIRAINSTANCE.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 65, in inner
+    result = f(*args, **kwargs)  # Chama a função, passando seus argumentos originais (que já contém a credencial criptografada)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\Data\email.py", line 60, in SendEmail
+    host = Global.Email['host']
+           ^^^^^^^^^^^^
+AttributeError: type object 'Global' has no attribute 'Email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 88, in inner
+    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Events\e000_general.py", line 32, in E01_Send_Error_Report
+    SendEmail(
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 93, in inner
+    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+Exception: Houve um erro na chamada da função SENDEMAIL.
+
+
+
+Traceback (most recent call last):
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 65, in inner
+    result = f(*args, **kwargs)  # Chama a função, passando seus argumentos originais (que já contém a credencial criptografada)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\Auth\session.py", line 37, in CreateJiraInstance
+    return JIRA(
+           ^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 580, in __init__
+    si = self.server_info()
+         ^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3120, in server_info
+    j = self._get_json("serverInfo")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3858, in _get_json
+    raise e
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\client.py", line 3855, in _get_json
+    r_json = json_loads(r)
+             ^^^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\jira\utils\__init__.py", line 76, in json_loads
+    return resp.json()
+           ^^^^^^^^^^^
+  File "d:\RPA\template\venv-template\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 3 column 1 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA\template\p000_main.py", line 12, in <module>
+    P001_Project_Setup()
+  File "D:\RPA\template\p001_project_setup.py", line 21, in __new__
+    self.T02_Create_Jira_Instance()
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 139, in inner
+    raise error
+  File "D:\RPA\template\Assets\Libraries\RPA\logger.py", line 88, in inner
+    f_result = f(*args, **kwargs)  # tenta executar a chamada da funçao
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\p001_project_setup.py", line 42, in T02_Create_Jira_Instance
+    Global.jira : JIRA = CreateJiraInstance(jira_cookies, credential = Credentials.jira)  # Cria uma nova instância do Jira
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA\template\Assets\Libraries\RPA\Cryptography\crypt.py", line 93, in inner
+    raise Exception(f"Houve um erro na chamada da função {str(f.__qualname__.split('.')[0]).upper()}.")
+Exception: Houve um erro na chamada da função CREATEJIRAINSTANCE.

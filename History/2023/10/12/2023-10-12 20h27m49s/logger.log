@@ -1,0 +1,16 @@
+2023-10-12 20:27:50,772 [START] INFO => Process started by diana.s. Args: ['D:\\RPA\\template\\p000_main.py', 'false']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2023-10-12 20:27:50,841 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.079041s       | * time elapsed: 1.118972s      
+* success: true   
+* output: COnfiguração realizda.
+
+
