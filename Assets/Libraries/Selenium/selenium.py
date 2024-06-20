@@ -3,14 +3,15 @@ import os
 
 import requests
 from selenium.webdriver.common.by import By
-from Assets.Libraries.Data.data import Count_ocurrences, Verify_money_in_text
+from Assets.Libraries.Data.data import Count_ocurrences, Remove_Non_Letters, Verify_money_in_text
 from Assets.Libraries.cfg import Settings
 
 
 
 def Get_News_Atributtes(news, news_parts, news_data):
+    """Get the necessary information to put in Excel"""
 
-    title = news_parts[1]  # Junta as duas primeiras partes com um espaço
+    title = news_parts[1]  
     description = news_parts[2]
     
     try:
@@ -38,17 +39,17 @@ def Download_news_Image(news, page_identifier):
         img_element = news.find_element(By.TAG_NAME, 'img')
         img_url = img_element.get_attribute('src')
 
-        # Fazer o download da imagem usando requests
+        # Download image
         response = requests.get(img_url, stream=True)
         if response.status_code == 200:
-            # Verificar se o diretório existe, caso contrário, criar
-            if not os.path.exists(Settings.Images_path):
-                os.makedirs(Settings.Images_path)
+            # Verify if path exists
+            if not os.path.exists(Settings.images_path):
+                os.makedirs(Settings.images_path)
 
-            # Caminho completo para salvar a imagem
-            filepath = os.path.join(Settings.Images_path, f"{page_identifier}.png")
+           
+            filepath = os.path.join(Settings.images_path, f"{Remove_Non_Letters(page_identifier)}.png")
 
-            # Salvar a imagem
+            # Save image
             with open(filepath, 'wb') as f:
                 f.write(response.content)
 

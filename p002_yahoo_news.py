@@ -15,7 +15,7 @@ class P002_Access_Site():
         self.browser = Selenium()
         self.T01_Open_Browser(self)
         self.T02_Search_News(self)
-        news_data = self.T03_Get_NewsInfo(self)
+        news_data = self.T03_Get_NewsInfo(self)['data']
         return news_data
  
     @Retry(1)  # Em caso de erro, faz 1 nova tentativa  
@@ -25,15 +25,16 @@ class P002_Access_Site():
             self.browser.open_available_browser(Settings.Site_Url, maximized=True)
 
         except Exception as e:
-            print(f"Erro ao abrir o navegador ou encontrar o elemento: {e}")
-            raise e
+            raise Exception ("Failure to open browser: ", e)
 
         return Result(success = True, logOutput = f"Site opened", data = None)
 
 
-
+    @Retry(1)
     def T02_Search_News(self):
+        """Search the news on the portal"""
 
+        #failure to open browser
         self.browser.wait_until_page_contains_element(Settings.web_elements['search'], timeout=25)
         self.browser.click_element(Settings.web_elements['search'])
 
@@ -42,16 +43,17 @@ class P002_Access_Site():
         self.browser.input_text(search_input, Settings.search_phrase)
         # Pressiona a tecla Enter no campo de busca
         self.browser.press_keys(search_input, 'ENTER')
-
+        
         return Result(success = True, logOutput = "News obtained.", data = None)
 
 
     def T03_Get_NewsInfo(self):
-
+        """Get information from the news found"""
 
         page_number = 1
         all_news_collected = False
         news_data = []
+        #Get valid search months
         months = Obtain_months(Settings.date_range)
         current_url = self.browser.get_location()
 
@@ -61,7 +63,7 @@ class P002_Access_Site():
             news_elements = self.browser.find_elements(Settings.web_elements['news'])
 
             if not news_elements:
-                # Se não houver mais elementos de notícias, saia do loop
+                # If there are no more news elements, exit the loop
                 all_news_collected = True
                 break
 
@@ -71,17 +73,17 @@ class P002_Access_Site():
                 if any(month in date for month in months):
                     news_data = Get_News_Atributtes(news, news_parts, news_data)
                 else:
-                    # Se a data não estiver no intervalo, finalize o loop
+                    # If the date is not in range, end the loop
                     all_news_collected = True
                     break
 
             if not all_news_collected:
-                # Avança para a próxima página
+                #Advance to the next page
                 page_number += 1
                 next_page_url = f"{current_url}&p={page_number}"
                 self.browser.go_to(next_page_url)
 
         
-        return Result(success = True, logOutput = "News obtained.", data = news_data)
+        return Result(success = True, logOutput = "News information obtained.", data = news_data)
 
 

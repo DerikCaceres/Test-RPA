@@ -58,3 +58,7 @@ def Obtain_months(parametro):
 
     # Retornar a lista de meses
     return meses_ingleses
+
+def Remove_Non_Letters(text):
+    # Usar expressão regular para substituir caracteres não alfabéticos por uma string vazia
+    return re.sub(r'[^a-zA-Z]', '', text)

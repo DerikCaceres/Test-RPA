@@ -1,12 +1,14 @@
 from datetime import datetime
+import os
 from Assets.Libraries.RPA.inputs import GetParameter
 from selenium import webdriver
 
 
 class Options():
 
-    # Indica se será acessado o Jira de Homologação
+    
     Search_phrase = GetParameter("search_phrase") 
+    Date_Raneg = GetParameter("date_range")
  
        
 class Global():
@@ -26,7 +28,9 @@ class Settings():
     Site_Url = 'https://www.latimes.com/'
     search_phrase = 'economy'
     date_range = 2
-    Images_path = "Assets\\Libraries\\Images"
+    images_path = "Assets\\Libraries\\Images"
+    worksheet_news_path = "Assets\\Libraries\\Worksheets\\news.xlsx"
+    log_worksheet = os.path.join(Global.log_directory, "Final_worksheet\\Woksheet.log")
     web_elements = {
         "search":"xpath://button[@data-element='search-button']",
         "search_bar":"xpath://input[@data-element='search-form-input']",

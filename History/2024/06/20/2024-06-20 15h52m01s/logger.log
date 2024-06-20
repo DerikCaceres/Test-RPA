@@ -1,0 +1,113 @@
+2024-06-20 15:52:01,931 [START] INFO => Process started by User. Args: ['C:\\Users\\User\\OneDrive\\Área de Trabalho\\Test-RPA\\p000_main.py']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:01,940 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.008554s       | * time elapsed: 0.877326s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2024-06-20 15:52:03,245 RPA.Browser.Selenium INFO => Webdriver version taken into use: ChromeDriver 126.0.6478.62 (b2781ca4c383af675f7a25c7b03b4a54e25e559a-refs/branch-heads/6478_56@{#4})
+
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:03,251 RobotFramework INFO => Creating an instance of the Chrome WebDriver.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:04,359 RPA.Browser.Selenium INFO => Created Chrome browser (version 126.0.6478) with arguments: --start-maximized --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:04,360 RobotFramework INFO => <p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td></td></tr></table></div>
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:04,361 RobotFramework INFO => Opening url 'https://www.latimes.com/'
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:09,74 [P002_ACCESS_SITE] [T01_OPEN_BROWSER]  INFO => None
+
+* params: ["<class 'p002_yahoo_news.P002_Access_Site'>"]
+* function duration: 7.078739s       | * time elapsed: 8.010402s      
+* success: true   
+* output: Site opened
+
+
+2024-06-20 15:52:09,93 RobotFramework INFO => Clicking element 'xpath://button[@data-element='search-button']'.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:09,150 RobotFramework INFO => Typing text 'politic in USA' into text field '<selenium.webdriver.remote.webelement.WebElement (session="005bfda4843625f41b94799f1d02e782", element="f.1693B1DFB6D5A1450EBE56E38E41B47F.d.3A2651C509468E82D647F18A78A30AAB.e.63")>'.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:09,200 RobotFramework INFO => Sending key(s) ('ENTER',) to <selenium.webdriver.remote.webelement.WebElement (session="005bfda4843625f41b94799f1d02e782", element="f.1693B1DFB6D5A1450EBE56E38E41B47F.d.3A2651C509468E82D647F18A78A30AAB.e.63")> element.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:09,474 RobotFramework INFO => Pressing special key ENTER to element.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:09,475 RobotFramework INFO => Releasing special key ENTER.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:52:12,664 [P002_ACCESS_SITE] [T02_SEARCH_NEWS]  INFO => Search the news on the portal
+
+* params: ["<class 'p002_yahoo_news.P002_Access_Site'>"]
+* function duration: 3.589375s       | * time elapsed: 11.601199s     
+* success: true   
+* output: News obtained.
+
+

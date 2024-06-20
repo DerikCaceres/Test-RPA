@@ -1,9 +1,10 @@
 import locale
 import sys
-from Assets.Libraries.Windows.screen import SetScreenResolution
+
 from Assets.Libraries.RPA.logger import RPAProcess
 from Assets.Libraries.RPA.control import Result
-
+from Assets.Libraries.Windows.file import Clear_Images_Folder
+from Assets.Libraries.cfg import Settings
 
 @RPAProcess
 class P001_Project_Setup():
@@ -21,8 +22,7 @@ class P001_Project_Setup():
         
         try: sys.stdout.reconfigure(encoding='utf-8') # Configura a saída no console com codificação UTF8
         except: pass
-        
-        SetScreenResolution()  # Configura a resolução da tela (width=1920, heigth=1080) 
+        Clear_Images_Folder(Settings.images_path)
 
         return Result(success = True, logOutput = "COnfiguração realizda." , data = None)
     

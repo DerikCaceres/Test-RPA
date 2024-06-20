@@ -1,0 +1,137 @@
+2024-06-20 15:56:09,648 [START] INFO => Process started by User. Args: ['C:\\Users\\User\\OneDrive\\Área de Trabalho\\Test-RPA\\p000_main.py']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:09,659 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.009915s       | * time elapsed: 0.912478s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2024-06-20 15:56:10,941 RPA.Browser.Selenium INFO => Webdriver version taken into use: ChromeDriver 126.0.6478.62 (b2781ca4c383af675f7a25c7b03b4a54e25e559a-refs/branch-heads/6478_56@{#4})
+
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:10,945 RobotFramework INFO => Creating an instance of the Chrome WebDriver.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:12,33 RPA.Browser.Selenium INFO => Created Chrome browser (version 126.0.6478) with arguments: --start-maximized --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:12,34 RobotFramework INFO => <p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td></td></tr></table></div>
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:12,36 RobotFramework INFO => Opening url 'https://www.latimes.com/'
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:18,408 [P002_ACCESS_SITE] [T01_OPEN_BROWSER]  INFO => None
+
+* params: ["<class 'p002_yahoo_news.P002_Access_Site'>"]
+* function duration: 8.693775s       | * time elapsed: 9.661966s      
+* success: true   
+* output: Site opened
+
+
+2024-06-20 15:56:18,419 RobotFramework INFO => Clicking element 'xpath://button[@data-element='search-button']'.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:18,471 RobotFramework INFO => Typing text 'politic in USA' into text field '<selenium.webdriver.remote.webelement.WebElement (session="9b50f35fcbf1044d7642fae434a40747", element="f.2265BCB484128BC097A9C8D7FE48880A.d.6F038CD9B43A7D6059262A22E4D471D7.e.70")>'.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:18,526 RobotFramework INFO => Sending key(s) ('ENTER',) to <selenium.webdriver.remote.webelement.WebElement (session="9b50f35fcbf1044d7642fae434a40747", element="f.2265BCB484128BC097A9C8D7FE48880A.d.6F038CD9B43A7D6059262A22E4D471D7.e.70")> element.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:18,799 RobotFramework INFO => Pressing special key ENTER to element.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:18,800 RobotFramework INFO => Releasing special key ENTER.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:22,181 [P002_ACCESS_SITE] [T02_SEARCH_NEWS]  INFO => Search the news on the portal
+
+* params: ["<class 'p002_yahoo_news.P002_Access_Site'>"]
+* function duration: 3.772059s       | * time elapsed: 13.434774s     
+* success: true   
+* output: News obtained.
+
+
+2024-06-20 15:56:30,453 RobotFramework INFO => Opening url 'https://www.latimes.com/search?q=politic+in+USA&p=2'
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:44,488 RobotFramework INFO => Opening url 'https://www.latimes.com/search?q=politic+in+USA&p=3'
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 15:56:53,937 [P002_ACCESS_SITE] [T03_GET_NEWSINFO]  INFO => Get information from the news found
+
+* params: ["<class 'p002_yahoo_news.P002_Access_Site'>"]
+* function duration: 31.754780s      | * time elapsed: 45.190376s     
+* success: true   
+* output: News information obtained.
+
+
