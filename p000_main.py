@@ -9,8 +9,8 @@ RPALogging()
 try:
 
     P001_Project_Setup()
-    P002_Access_Site()
-    #P003_Write_In_Excel_File()
+    news_data = P002_Access_Site()
+    P003_Write_In_Excel_File(news_data)
     Terminate()
 
 except Exception as e:

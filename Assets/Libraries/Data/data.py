@@ -1,7 +1,8 @@
 from datetime import datetime
+import locale
 import re
 
-from calendar import month_name
+from calendar import month_name, month_abbr
 from Assets.Libraries.cfg import Settings
 
 
@@ -35,18 +36,25 @@ def Count_ocurrences(title, description):
 
 
 
+
 def Obtain_months(parametro):
-    # Obter o mês atual
+    # Definir localidade para inglês
+    locale.setlocale(locale.LC_TIME, 'en_US.utf8')
+    
     mes_atual = datetime.now().month
     meses_ingleses = []
 
     # Adicionar o mês atual à lista de meses ingleses
     meses_ingleses.append(month_name[mes_atual])
+    meses_ingleses.append(month_abbr[mes_atual] + '.')
 
     # Adicionar meses anteriores conforme o parâmetro recebido
-    for i in range(1, parametro + 1):
+    for i in range(1, parametro):
         mes_anterior = (mes_atual - i) % 12
+        if mes_anterior == 0:  # Caso especial para dezembro quando modulo resulta em zero
+            mes_anterior = 12
         meses_ingleses.append(month_name[mes_anterior])
+        meses_ingleses.append(month_abbr[mes_anterior] + '.')
 
-    # Retornar a lista de meses como uma string formatada
-    return ', '.join(meses_ingleses)
+    # Retornar a lista de meses
+    return meses_ingleses

@@ -1,0 +1,105 @@
+2024-06-20 09:30:27,755 [START] INFO => Process started by User. Args: ['C:\\Users\\User\\OneDrive\\Área de Trabalho\\Test-RPA\\p000_main.py']
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:27,776 [P001_PROJECT_SETUP] [T01_PROJECT_SETUP]  INFO => Configurações do projeto
+
+* params: []      
+* function duration: 0.020560s       | * time elapsed: 0.949230s      
+* success: true   
+* output: COnfiguração realizda.
+
+
+2024-06-20 09:30:29,347 RPA.Browser.Selenium INFO => Webdriver version taken into use: ChromeDriver 126.0.6478.62 (b2781ca4c383af675f7a25c7b03b4a54e25e559a-refs/branch-heads/6478_56@{#4})
+
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:29,349 RobotFramework INFO => Creating an instance of the Chrome WebDriver.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:30,487 RPA.Browser.Selenium INFO => Created Chrome browser (version 126.0.6478) with arguments: --start-maximized --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:30,488 RobotFramework INFO => <p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td></td></tr></table></div>
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:30,488 RobotFramework INFO => Opening url 'https://www.latimes.com/'
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:37,882 [P002_ACCESS_SITE] [T01_OPEN_BROWSER]  INFO => None
+
+* params: ["<class 'p002_yahoo_news.P002_Access_Site'>"]
+* function duration: 10.045386s      | * time elapsed: 11.056201s     
+* success: true   
+* output: Site opened
+
+
+2024-06-20 09:30:37,897 RobotFramework INFO => Clicking element 'xpath://button[@data-element='search-button']'.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:37,953 RobotFramework INFO => Typing text 'economy' into text field '<selenium.webdriver.remote.webelement.WebElement (session="65f27c9b59ed5360da53e6bc4314e1bc", element="f.718E20B0A402A6DDFEB850E6FD46BE84.d.FF7F6800634ADA644960B0BAFB98CDE1.e.64")>'.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:38,3 RobotFramework INFO => Sending key(s) ('ENTER',) to <selenium.webdriver.remote.webelement.WebElement (session="65f27c9b59ed5360da53e6bc4314e1bc", element="f.718E20B0A402A6DDFEB850E6FD46BE84.d.FF7F6800634ADA644960B0BAFB98CDE1.e.64")> element.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:38,310 RobotFramework INFO => Pressing special key ENTER to element.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+
+2024-06-20 09:30:38,311 RobotFramework INFO => Releasing special key ENTER.
+
+* params: None    
+* function duration: None            | * time elapsed: None           
+* success:None    
+* output: None    
+
+

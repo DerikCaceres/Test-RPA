@@ -31,10 +31,6 @@ class Settings():
         "search":"xpath://button[@data-element='search-button']",
         "search_bar":"xpath://input[@data-element='search-form-input']",
         "confirm_search":"/html/body/div[2]/ps-search-results-module/form",
-        "news":"/html/body/div[2]/ps-search-results-module/form/div[2]/ps-search-filters/div/main/ul",
-        "news_tittle":"xpath://h1[@class='headline']",
-        "news_date":"xpath://time[@class='published-date']",
-        "news_description":"/html/body/div[2]/div[2]/main/article/div[4]",
-        "news_image":".//picture/img"
+        "news":"xpath://*/ul[@class='search-results-module-results-menu']/li",
 
     }
