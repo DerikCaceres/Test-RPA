@@ -20,14 +20,14 @@ def Get_News_Atributtes(news, news_parts, news_data):
         page_identifier = ' '.join(title.split(' ')[0:3])
     #getting image
     filepath = Download_news_Image(news, page_identifier)
-    money_in_text = Verify_money_in_text(title, description)
+    word_in_text = Verify_money_in_text(title, description)
     ocurrences = Count_ocurrences(title, description)
 
     news_data.append({
         "Title": title,
         "Description": description,
         "Filepath": filepath,
-        "Money_in_text": money_in_text,
+        "Money_in_text": word_in_text,
         "Occurrences": ocurrences
     })
 
